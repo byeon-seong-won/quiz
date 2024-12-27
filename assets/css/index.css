@@ -66,9 +66,10 @@
     align-items: center;
     justify-content: center;
     align-self: center;
+    border: 1px solid #000;
 }
 .img-box.animation {
-    margin-top: 3vh;
+    margin-top: 8vh;
     max-width: 100%;
 }
 .img-box img {
@@ -247,3 +248,24 @@
     font-size: 18px;
 }
 /* 팝업창 */
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-height: 650px) {
+    .img-box {
+        margin-top: 30px;
+    }
+    .img-box.animation {
+        margin-top: -10px;
+        z-index: -1;
+    }
+}
+
