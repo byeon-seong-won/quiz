@@ -38,7 +38,6 @@
 .cont-area {
     display: flex;
     flex-direction: column;
-    height: 100%;
     margin-top: 4vh;
 }
 .text-box h1 {
