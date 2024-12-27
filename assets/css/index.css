@@ -9,7 +9,6 @@
 .wrap > div {
     width: 100%;
 }
-
 .header-area {
     display: flex;
     justify-content: space-between;
@@ -172,7 +171,6 @@
     position: absolute;
     bottom: 34px;
     padding: 0 5.33vw;
-    border: 1px solid #000;
 }
 .btn-area button {
     height: 14.66vw;
