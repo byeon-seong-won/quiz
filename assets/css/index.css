@@ -70,6 +70,7 @@
 .img-box.animation {
     margin-top: 5vh;
     max-width: 100%;
+    border: 1px solid red;
 }
 .img-box img {
     width: 61.33vw;
