@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.9.4/build/player/lottie.min.js"></script>
     <script src="./assets/js/index.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
 
     <div class="wrap">
+
+        <div class="progress-bar"></div>
 
         <!-- 공통 header -->
         <div class="header-area">
@@ -21,92 +27,116 @@
         <!-- 공통 header -->
 
 
-        <!-- step-01 -->
-        <!-- <div class="cont-area">
-            <div class="text-box">
-                <h1>STEP 1</h1>
-                <p>키워드를 복사해주세요</p>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <!-- step-01 -->
+                <div class="swiper-slide">
+                    <div class="cont-area">
+                        <div class="text-box">
+                            <p>키워드를 복사해주세요</p>
+                        </div>
+                        <div class="img-box">
+                            <img src="./assets/img/mobile.png" alt="mobile">
+                            <button class="keyword">클로이&nbsp;14&nbsp;맥스나인</button>
+                        </div>
+                    </div>
+                    <!-- <div class="btn-area">
+                        <button>키워드 복사하기</button>
+                    </div> -->
+                </div>
+                <!-- step-01 -->
+
+                <!-- step-02 -->
+                <div class="swiper-slide">
+                    <div class="cont-area">
+                        <div class="text-box">
+                            <p><span>네이버 가격비교</span>에서<br>
+                            해당 상품을 찾아주세요</p>
+                            <span>**검색어가 있을 시 지우고 재검색해주세요</span>
+                        </div>
+                        <div class="img-box animation" id="step02"></div>
+                    </div>
+                </div>
+                <!-- step-02 -->
+
+                <!-- step-03 -->
+                <div class="swiper-slide">
+                    <div class="cont-area">
+                        <div class="text-box">
+                            <p>상세정보를 펼쳐<br>
+                                <span>관련 해시태그</span>를 찾아주세요</p>
+                        </div>
+                        <div class="img-box animation" id="step03"></div>
+                    </div>
+                    
+                </div>
+                <!-- step-03 -->
+
+                <!-- step-04 -->
+                <div class="swiper-slide">
+                    <div class="cont-area">
+                        <div class="text-box">
+                            <p>상세정보를 펼쳐<br>
+                                <span>관련 해시태그</span>를 찾아주세요</p>
+                        </div>
+                        <div class="img-box animation">
+                            <dotlottie-player src="https://lottie.host/3886c3a2-1ceb-481b-8914-51cb0d7a0d5e/KT5bR6qVMU.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- step-04 -->
+
             </div>
-            <div class="img-box">
-                <img src="./assets/img/mobile.png" alt="mobile">
-                <div class="keyword">클로이 14 맥스나인</div>
+            <div class="swiper-pagination"></div>
+            <div class="btn-area flex">
+                <div class="swiper-button-prev swiper-button">이전</div>
+                <div class="swiper-button-next swiper-button">다음</div>
             </div>
+
         </div>
-        <div class="btn-area">
-            <button>키워드 복사하기</button>
-        </div> -->
-        <!-- step-01 -->
-         
-
-
-        <!-- step-02 -->
-        <div class="cont-area">
-            <div class="text-box">
-                <h1>STEP 2</h1>
-                <p>&apos;가격비교 더보기&apos; 클릭 후<br>
-                해당 상품을 찾아주세요</p>
-                <span>**검색어가 있을 시 지우고 재검색해주세요</span>
-            </div>
-            <div class="img-box animation">
-                <lottie-player src="./assets/json/default_step2.json" background="transparent" speed="1" loop autoplay></lottie-player>
-            </div>
-        </div>
-        <div class="btn-area flex">
-            <button>이전</button>
-            <button>다음</button>
-        </div>
-        <!-- step-02 -->
-
-
-
-        <!-- step-03 -->
-        <!-- <div class="cont-area">
-            <div class="text-box">
-                <h1>STEP 3</h1>
-                <p>상세정보 하단의<br>
-                    &apos;구매 추가정보&apos;를 눌러주세요</p>
-            </div>
-            <div class="img-box animation">
-                <lottie-player src="./assets/json/number_step3.json" background="transparent" speed="1" loop autoplay></lottie-player>
-            </div>
-        </div>
-        <div class="btn-area flex">
-            <button>이전</button>
-            <button>미션 시작</button>
-        </div> -->
-        <!-- step-03 -->
-
-
 
     </div>
 
     
 
 
-
-
-
-    <!-- 팝업창 : 키워드 복사 -->
+    <!-- step-01 팝업창 : 키워드 복사 -->
     <!-- <div class="dimmedarea"></div>
     <div class="pop-area">
         <span></span>
         <p>키워드가 복사되었어요</p>
         <p>검색창에 붙여넣기 해주세요</p>
-        <p>상세페이지를 펼쳐 해시태그를 찾아주세요</p>
+        <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
         <button>이어하기</button>
     </div> -->
-    <!-- 팝업창 : 키워드 복사 -->
+    <!-- step-01 팝업창 : 키워드 복사 -->
 
 
 
-    
+
+
+    <!-- 팝업창 : 확인했어요 -->
+    <!-- <div class="dimmedarea"></div>
+    <div class="pop-area">
+        <p>가격비교 페이지로 랜딩할 경우,</p>
+        <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
+        <p>클릭해주세요</p>
+        <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
+        <button>네, 확인했어요</button>
+    </div> -->
+    <!-- 팝업창 : 확인했어요 -->
+
+
+
+
     <!-- 팝업창 : 검색하러가기 -->
     <!-- <div class="dimmedarea"></div>
     <div class="pop-area">
-        <span></span>
-        <p>키워드 복사 후, 검색창에 붙여넣어</p>
-        <p class="mark">아래 상품을 찾아주세요</p>
-        <p>상세페이지를 펼쳐 해시태그를 찾아주세요</p>
+        <p>복사한 키워드를 검색창에 붙여넣고,</p>
+        <p><span class="mark">아래 상품을 찾아주세요</span></p>
+        <img src="./assets/img/prd.png" alt="복사한 키워드를 검색창에 붙여넣고,아래 상품을 찾아주세요">
         <button>검색하러가기</button>
     </div> -->
     <!-- 팝업창 : 검색하러가기 -->
