@@ -75,4 +75,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// 이전 다음 클릭시
+// 정답입력 키보드 대응(ios) 
+let prevVisualViewport = 0;
+const handleVisualViewportResize = () => {
+  if (isIos && modal_opened) { //ios인 상태에서 모달이 오픈되면
+    const currentVisualViewport = window.visualViewport.height; //visualViewPort의 height를 가져옵니다.
+    if (currentVisualViewport < prevVisualViewport) {
+      const scrollHeight = window.document.scrollingElement.scrollHeight;
+      const scrollTop = scrollHeight - window.visualViewport.height;
+
+      window.scrollTo({ top: scrollTop, behavior: 'smooth' }); // 입력창이 키보드에 가려지지 않도록 조절
+    }
+
+    prevVisualViewport = window.visualViewport.height;
+  }
+ };
+
+if (isIOS) {
+  window.visualViewport.onresize = handleVisualViewportResize;
+  //visualViewPort가 변경될 때 마다 호출
+}
+

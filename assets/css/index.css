@@ -265,23 +265,58 @@
 
 
 
+
+
 /* step4 */
-.code-input-block {
+.cont-area .info-box {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cont-area .info-box p:nth-child(1) {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #5D5F65;
+    font-size: 14px;
+    font-weight: 500;
+}
+.cont-area .info-box p:nth-child(1) span {
+    padding: 3px;
+    font-size: 8px;
+    color: #496DDB;
+    font-weight: 600;
+    border: 1px solid #496DDB;
+}
+.cont-area .info-box p:nth-child(2) {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.code-input-block {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 4px;
 }
 .code-input {
     padding: 10px 9px;
     width: 34px;
     height: 42px;
-    border: 1px solid #496DDB;
+    border: 2px solid #496DDB;
     border-radius: 10px;
     font-size: 18px;
     font-weight: 600;
     color: #494B50;
 }
-.code-input:focus {}
+.code-input:focus {
+    outline: none;
+}
 
 
 
