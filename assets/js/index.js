@@ -13,17 +13,27 @@ var swiper = new Swiper('.swiper', {
     on: {
         slideChange: function() {
             const idx = this.realIndex;
-
-
-            
             // step2
             if (idx === 1) { 
                 animation.goToAndStop(0, true);
                 animation.play();
             }
+            // step3
+            if (idx === 2) { 
+                $('.btn-area.flex .swiper-button-prev').html('이전');
+                $('.btn-area.flex .swiper-button-next').html('미션 시작');
+            }
+            // step4
+            if (idx === 3) { 
+                $('.btn-area.flex .swiper-button-prev').html('다시 확인하기');
+                $('.btn-area.flex .swiper-button-next').html('정답 입력');
+            }
+            else if(!(idx === 2 || idx === 3)) {
+                $('.btn-area.flex .swiper-button-prev').html('이전');
+                $('.btn-area.flex .swiper-button-next').html('다음');
+            }
         }
     }
-
 });
 
 
@@ -38,7 +48,6 @@ var swiper = new Swiper('.swiper', {
     autoplay: true,
   });
 
-
   lottie.loadAnimation({
     container: document.getElementById('step03'),
     path: '../assets/json/number_step3.json',
@@ -50,7 +59,7 @@ var swiper = new Swiper('.swiper', {
 
 
 
-
+// 키워드복사하기 애니메이션
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';

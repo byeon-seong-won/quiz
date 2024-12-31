@@ -73,8 +73,6 @@
     border: 1px solid #000;
     height: 100%;
 }
-
-
 .cont-area {
     display: flex;
     flex-direction: column;
@@ -108,9 +106,8 @@
 }
 .img-box {
     position: relative;
-    /* max-width: 69.33vw; */
     width: 100%;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,7 +115,7 @@
     border: 1px solid #000;
 }
 .img-box.animation {
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
     max-width: 100%;
     border: 1px solid red;
 }
@@ -268,6 +265,26 @@
 
 
 
+/* step4 */
+.code-input-block {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.code-input {
+    padding: 10px 9px;
+    width: 34px;
+    height: 42px;
+    border: 1px solid #496DDB;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #494B50;
+}
+.code-input:focus {}
+
+
+
 
 
 
@@ -290,16 +307,17 @@
     transform: translateX(-50%);
     z-index: 1;
     padding: 16px;
+    padding-top: 16px;
     bottom: -200px; 
     animation: slideUp 1s forwards;  
 }
 @keyframes slideUp {
     0% {
-        bottom: -200px;  /* 시작 위치: 화면 밖 */
+        bottom: -200px;  
         opacity: 0;
     }
     100% {
-        bottom: 34px;  /* 종료 위치: 화면 안 */
+        bottom: 34px;  
         opacity: 1;
     }
 }
@@ -349,13 +367,13 @@
 
 
 @media screen and (max-height: 650px) {
-    .img-box {
+    /* .img-box {
         margin-top: 30px;
     }
     .img-box.animation {
         margin-top: -20px;
         z-index: -1;
         border: 1px solid #000;
-    }
+    } */
 }
 
