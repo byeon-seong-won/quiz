@@ -243,6 +243,7 @@
     display: flex;
     align-items: center;
     gap: 2.66vw;
+    z-index: 2;
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -294,6 +295,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 16px;
 }
 .cont-area .info-box p:nth-child(1) {
     display: flex;
@@ -303,6 +305,7 @@
     color: #5D5F65;
     font-size: 14px;
     font-weight: 500;
+    text-align: center;
 }
 .cont-area .info-box p:nth-child(1) span {
     padding: 3px;
@@ -310,6 +313,7 @@
     color: #496DDB;
     font-weight: 600;
     border: 1px solid #496DDB;
+    flex-shrink: 0;
 }
 .cont-area .info-box p:nth-child(2) {
     font-size: 22px;
@@ -351,11 +355,12 @@
     height: 17px;
 }
 .banner {
+    display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    border: 2px solid yellow;
+    z-index: 2;
 }
 
 

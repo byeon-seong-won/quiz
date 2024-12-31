@@ -50,12 +50,14 @@ var swiper = new Swiper('.swiper', {
 
             // step4
             if (idx === 3) { 
-                const imgTag = '<img src="../assets/img/banner.png" alt="설명 텍스트" class="banner">';
+                const imgTag = '<a href="#" class="banner"><img src="../assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.swiper').append(imgTag);
                 $('.btn-area.flex .swiper-button-prev').html('다시 확인하기');
                 $('.btn-area.flex .swiper-button-next').html('정답 입력');
+                $('.btn-area.flex').css('transform', 'translateY(-48px)');
             } else {
                 $('.swiper .banner').remove();
+                $('.btn-area.flex').css('transform', 'translateY(0)');
             }
 
             if(!(idx === 2 || idx === 3)) {
@@ -174,19 +176,19 @@ $('.pop-area .step01-btn').click(function() {
 
 
 // step2 상품비교 확인 팝업창
-$('.swiper-button-next').click(function() {
-    $('.pop-wrap.step02').addClass('on')
-})
-$('.pop-area .step02-btn').click(function() {
-    swiper.slideTo(2);
-    $('.pop-wrap.step02').removeClass('on')
-})
+// $('.swiper-button-next').click(function() {
+//     $('.pop-wrap.step02').addClass('on')
+// })
+// $('.pop-area .step02-btn').click(function() {
+//     swiper.slideTo(2);
+//     $('.pop-wrap.step02').removeClass('on')
+// })
 
 
 
-// step3 검색하기 팝업창
-$('.swiper-button-next').click(function() {
-    $('.pop-wrap.step03').addClass('on')
-})
+
+// $('.swiper-button-next').click(function() {
+//     $('.pop-wrap.step03').addClass('on')
+// })
 
 
