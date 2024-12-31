@@ -74,14 +74,14 @@ var swiper = new Swiper('.swiper', {
 // Lottie 애니메이션 로드
 const step2_animation = lottie.loadAnimation({
   container: document.getElementById('step02'),
-  path: '/assets/json/hash_step2.json',
+  path: 'quiz/assets/json/hash_step2.json',
   renderer: 'svg',
   loop: true,
   autoplay: true,
 });
 const step3_animation = lottie.loadAnimation({
   container: document.getElementById('step03'),
-  path: '/assets/json/hash_step3.json',
+  path: 'quiz/assets/json/hash_step3.json',
   renderer: 'svg',
   loop: true,
   autoplay: true,
