@@ -15,7 +15,7 @@ var swiper = new Swiper('.swiper', {
             // 초기 세팅 (첫번째 슬라이드만)
             $('.swiper-button-prev, .swiper-button-next').hide(); 
             $('.btn-area.copy').show(); 
-
+            keywordAni();
         },
         slideChange: function() {
             const idx = this.realIndex;
@@ -94,18 +94,15 @@ const step3_animation = lottie.loadAnimation({
 
 
 
+
+
 // 키워드복사하기 애니메이션
-document.addEventListener('DOMContentLoaded', () => {
+function keywordAni() {
     document.querySelectorAll('.img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
-});
-
-
-
-
-
-
+    $('.img-box .keyword').addClass('animate');
+}
 
 
 
@@ -132,6 +129,9 @@ const handleVisualViewportResize = () => {
 if (isIOS) {
   window.visualViewport.onresize = handleVisualViewportResize; //visualViewPort가 변경될 때 마다 호출
 }
+
+
+
 
 
 
@@ -187,8 +187,8 @@ $('.pop-area .step01-btn').click(function() {
 
 
 
-// $('.swiper-button-next').click(function() {
-//     $('.pop-wrap.step03').addClass('on')
-// })
+$('.swiper-button-next').click(function() {
+    $('.pop-wrap.step03').addClass('on')
+})
 
 
