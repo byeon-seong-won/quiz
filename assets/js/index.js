@@ -27,8 +27,15 @@ var swiper = new Swiper('.swiper', {
             if (idx === 3) { 
                 $('.btn-area.flex .swiper-button-prev').html('다시 확인하기');
                 $('.btn-area.flex .swiper-button-next').html('정답 입력');
+                const imgTag = 
+                '<img src="../assets/img/banner.png" alt="설명 텍스트" class="banner">'
+                ;
+                $('.swiper').append(imgTag);
+            } else {
+                $('.swiper .banner').remove();
             }
-            else if(!(idx === 2 || idx === 3)) {
+
+            if(!(idx === 2 || idx === 3)) {
                 $('.btn-area.flex .swiper-button-prev').html('이전');
                 $('.btn-area.flex .swiper-button-next').html('다음');
             }
@@ -75,8 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
+
 // 정답입력 키보드 대응(ios) 
 let prevVisualViewport = 0;
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent); // iOS 디바이스인지 체크
+
 const handleVisualViewportResize = () => {
   if (isIos && modal_opened) { //ios인 상태에서 모달이 오픈되면
     const currentVisualViewport = window.visualViewport.height; //visualViewPort의 height를 가져옵니다.
@@ -95,4 +108,18 @@ if (isIOS) {
   window.visualViewport.onresize = handleVisualViewportResize;
   //visualViewPort가 변경될 때 마다 호출
 }
+
+
+// 정답입력 텍스트 입력시 초기화버튼 노출
+$('.code-input-block button').addClass('on');
+
+
+// 정답입력 초기화버튼
+function reset(){
+	document.querySelectorAll("input[type=text]")[0].value="";
+}
+
+
+
+
 

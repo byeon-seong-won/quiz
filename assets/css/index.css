@@ -305,7 +305,7 @@
     gap: 4px;
 }
 .code-input {
-    padding: 10px 9px;
+    text-align: center;
     width: 34px;
     height: 42px;
     border: 2px solid #496DDB;
@@ -313,10 +313,31 @@
     font-size: 18px;
     font-weight: 600;
     color: #494B50;
+    flex-shrink: 0;
+    caret-color: #496DDB;
 }
+
+
 .code-input:focus {
     outline: none;
 }
+.code-input-block button {
+    display: none;
+}
+.code-input-block button.on {
+    display: block;
+    background: url(../img/ico-reset.svg) no-repeat center / 100%;
+    width: 17px;
+    height: 17px;
+}
+.banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid yellow;
+}
+
 
 
 
