@@ -50,7 +50,7 @@ var swiper = new Swiper('.swiper', {
 
             // step4
             if (idx === 3) { 
-                const imgTag = '<a href="#" class="banner"><img src="../assets/img/banner.png" alt="설명 텍스트"></a>';
+                const imgTag = '<a href="#" class="banner"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.swiper').append(imgTag);
                 $('.btn-area.flex .swiper-button-prev').html('다시 확인하기');
                 $('.btn-area.flex .swiper-button-next').html('정답 입력');
