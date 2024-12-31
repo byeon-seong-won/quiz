@@ -17,7 +17,6 @@
 
     <div class="wrap">
 
-        <div class="progress-bar"></div>
 
         <!-- 공통 header -->
         <div class="header-area">
@@ -40,7 +39,7 @@
                             <button class="keyword">클로이&nbsp;14&nbsp;맥스나인</button>
                         </div>
                     </div>
-                    <div class="btn-area">
+                    <div class="btn-area copy" data-step="step01">
                         <button>키워드 복사하기</button>
                     </div>
                 </div>
@@ -79,8 +78,10 @@
                             <p><span>첫 번째 해시태그</span>를 찾아<br>
                                 정답을 입력해주세요</p>
                         </div>
-                        <div class="img-box animation" style="border: 1px solid #F2EBEB;width:37.86vw;border-radius: 12px;padding: 8px 7px;">
-                            <img src="./assets/img/prd.png" alt="첫 번째 해시태그를 찾아 정답을 입력해주세요">
+                        <div class="img-box">
+                            <div class="thumb">
+                                <img src="./assets/img/prd.png" alt="첫 번째 해시태그를 찾아 정답을 입력해주세요">
+                            </div>
                         </div>
                         <div class="info-box">
                             <p>잘먹잘싸상품명이들어갈곳곳곳곳<span>공식</span></p>
@@ -103,56 +104,56 @@
 
             </div>
             <div class="swiper-pagination"></div>
-            <div class="btn-area flex">
+            <div class="btn-area flex" style="border: 1px solid red;">
                 <div class="swiper-button-prev swiper-button">이전</div>
                 <div class="swiper-button-next swiper-button">다음</div>
             </div>
-
         </div>
-
     </div>
 
     
 
-
     <!-- step-01 팝업창 : 키워드 복사 -->
-    <!-- <div class="dimmedarea"></div>
-    <div class="pop-area">
-        <span></span>
-        <p>키워드가 복사되었어요</p>
-        <p>검색창에 붙여넣기 해주세요</p>
-        <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
-        <button>이어하기</button>
-    </div> -->
+    <div class="pop-wrap step01">
+        <div class="dimmedarea"></div>
+        <div class="pop-area step01">
+            <span></span>
+            <p>키워드가 복사되었어요</p>
+            <p>검색창에 붙여넣기 해주세요</p>
+            <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
+            <button class="step01-btn">이어하기</button>
+        </div>
+    </div>
     <!-- step-01 팝업창 : 키워드 복사 -->
 
 
 
+    <!-- step-01 팝업창 : 확인했어요 -->
+    <div class="pop-wrap step02">
+        <div class="dimmedarea"></div>
+        <div class="pop-area step02">
+            <p>가격비교 페이지로 랜딩할 경우,</p>
+            <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
+            <p>클릭해주세요</p>
+            <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
+            <button class="step02-btn">네, 확인했어요</button>
+        </div>
+    </div>
+    <!-- step-01 팝업창 : 확인했어요 -->
 
 
-    <!-- 팝업창 : 확인했어요 -->
-    <!-- <div class="dimmedarea"></div>
-    <div class="pop-area">
-        <p>가격비교 페이지로 랜딩할 경우,</p>
-        <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
-        <p>클릭해주세요</p>
-        <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
-        <button>네, 확인했어요</button>
-    </div> -->
-    <!-- 팝업창 : 확인했어요 -->
 
-
-
-
-    <!-- 팝업창 : 검색하러가기 -->
-    <!-- <div class="dimmedarea"></div>
-    <div class="pop-area">
-        <p>복사한 키워드를 검색창에 붙여넣고,</p>
-        <p><span class="mark">아래 상품을 찾아주세요</span></p>
-        <img src="./assets/img/prd.png" alt="복사한 키워드를 검색창에 붙여넣고,아래 상품을 찾아주세요">
-        <button>검색하러가기</button>
-    </div> -->
-    <!-- 팝업창 : 검색하러가기 -->
+    <!-- step-03 팝업창 : 검색하러가기 -->
+    <div class="pop-wrap step03">
+        <div class="dimmedarea"></div>
+        <div class="pop-area step03">
+            <p>복사한 키워드를 검색창에 붙여넣고,</p>
+            <p><span class="mark">아래 상품을 찾아주세요</span></p>
+            <img src="./assets/img/prd.png" alt="복사한 키워드를 검색창에 붙여넣고,아래 상품을 찾아주세요">
+            <button>검색하러가기</button>
+        </div>
+    </div>
+    <!-- step-03 팝업창 : 검색하러가기 -->
 
 
 </body>

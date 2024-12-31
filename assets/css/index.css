@@ -35,13 +35,6 @@
 
 
 
-/* progress bar 애니메이션 */
-@keyframes aniBar {
-    0% {width: 0;}
-    100% {width:100%;}
-}
-/* progress bar 애니메이션 */
-
 
 
 
@@ -121,6 +114,14 @@
 }
 .img-box img {
     width: 61.33vw;
+    border: 2px solid blue;
+}
+.img-box .thumb {
+    margin-top: 5px;
+    border: 1px solid #F2EBEB;
+    width:37.86vw;
+    border-radius: 12px;
+    padding: 8px 7px;
 }
 
 
@@ -220,9 +221,12 @@
     height: 3.73vw;
     background: url(../img/ico-copy.png) no-repeat center / 100%;
 }
+
+
 .btn-area {
     position: absolute;
     bottom: 34px;
+    width: 100%;
     /* padding: 0 5.33vw; */
     border: 1px solid #000;
 }
@@ -262,7 +266,23 @@
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
     opacity: 1 !important;
 }
-
+.btn-area.flex button {
+    color: #C2C2C5;
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+}
+.btn-area.copy button {
+    background: #496DDB;
+    width: 100%;
+    color: #fff;
+    border-radius: 14px;
+    height: 55px;
+    font-size: 18px;
+}
 
 
 
@@ -345,6 +365,9 @@
 
 
 /* 팝업창 */
+.pop-wrap {
+    display: none;
+}
 .dimmedarea {
     background: rgba(0, 0, 0,0.5);
     position: fixed;
@@ -352,6 +375,7 @@
     left: 0;
     height: 100vh;
     width: 100%;
+    z-index: 1;
 }
 .pop-area {
     position: absolute;
@@ -365,7 +389,12 @@
     padding: 16px;
     padding-top: 16px;
     bottom: -200px; 
-    animation: slideUp 1s forwards;  
+    animation: slideUp 0.8s forwards;  
+    z-index: 2;
+
+}
+.on {
+    display: block;
 }
 @keyframes slideUp {
     0% {
