@@ -65,7 +65,7 @@
     height: 100%;
 }
 .cont-area {
-    margin-top: 5.91vh;
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
 }
@@ -520,22 +520,21 @@
 
 
 
-
-
-
-
-
-
-
+@media screen and (max-height: 750px) {
+    .cont-area {
+        margin-top:38px;
+    }
+    .img-box {
+        margin-top: 20px;
+    }
+}
 
 @media screen and (max-height: 650px) {
-    /* .img-box {
-        margin-top: 30px;
+    .cont-area {
+        margin-top:28px;
     }
-    .img-box.animation {
-        margin-top: -20px;
-        z-index: -1;
-        border: 1px solid #000;
-    } */
+    .img-box {
+        margin-top: 18px;
+    }
 }
 
