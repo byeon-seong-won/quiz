@@ -736,6 +736,12 @@
         margin-top: 22px;
         gap: 3px;
     }
+    .code-input {
+        width: 25px;
+        height: 31px;
+        border-radius: 7px;
+        font-size: 13px;
+    }
     .text-input {
         height: 27px;
         padding-right: 22px;
