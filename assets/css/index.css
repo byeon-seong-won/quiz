@@ -464,13 +464,15 @@
     display: none;
 } */
 .input-block-wrap button {
+    width: 24px;
+    height: 24px;
+    background: url(../img/ico-reset.svg) no-repeat center / 17px 17px;
+}
+.input-block-wrap button.default {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background: url(../img/ico-reset.svg) no-repeat center / 17px 17px;
 }
 
 
