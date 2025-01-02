@@ -456,6 +456,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1.06vw;
 }
 .input-block-wrap input:focus {
     outline: none;
@@ -480,8 +481,8 @@
 
 /* ------- type1 : 자릿수 블록 ------- */
 .code-input {
-    width: 34px;
-    height: 42px;
+    width: 9.06vw;
+    height: 11.2vw;
     text-align: center;
     border: 2px solid #496DDB;
     border-radius: 10px;
@@ -491,9 +492,7 @@
     flex-shrink: 0;
     caret-color: #496DDB;
 }
-.code-input:not(:first-of-type) {
-    margin-left: 4px;
-}
+
 
 /* 잘못입력시 */
 .input-block-wrap.wrong .code-input {
@@ -592,8 +591,6 @@
         margin-top: 18px;
     }
 }
-
-
 
 
 
@@ -738,15 +735,13 @@
     }
     .input-block-wrap {
         margin-top: 22px;
+        gap: 3px;
     }
     .code-input {
         width: 25px;
         height: 31px;
         border-radius: 7px;
         font-size: 13px;
-    }
-    .code-input:not(:first-of-type) {
-        margin-left: 3px;
     }
     .text-input {
         height: 27px;
