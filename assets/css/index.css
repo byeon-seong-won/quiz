@@ -93,7 +93,7 @@
 .cont-area .img-box {
     position: relative;
     width: 100%;
-    margin-top: 7.46vw;
+    /* margin-top: 7.46vw; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +111,6 @@
     display: flex;
     align-items: center;
     gap: 2.66vw;
-    border: 1px solid #000;
 }
 .swiper-button-wrap .swiper-button {
     width: 100%;
