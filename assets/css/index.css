@@ -16,7 +16,6 @@
 }
 
 
-
 /* header */
 .header-area {
     height: 60px;
@@ -48,9 +47,9 @@
 .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
     position: fixed;
     left: 0 !important;
-    top: 16vw !important;
+    top: 60px !important;
     width: 100% !important;
-    height: 1.33vw !important;
+    height: 5px !important;
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: #496DDB !important;
@@ -66,34 +65,34 @@
     height: 100%;
 }
 .cont-area {
-    margin-top: 12.8vw;
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
 }
 .cont-area .text-box {
-    min-height: 21.86vw;
+    min-height: 82px;
 }
 .cont-area .text-box p {
-    font-size: 5.86vw;
+    font-size: 22px;
     font-weight: 600;
     line-height: 1.4;
-    letter-spacing: calc(5.86vw * (-2 / 100));
+    letter-spacing: calc(22px * (-2 / 100));
 }
 .cont-area .text-box p > span {
     color: #496DDB;
 }
 .cont-area .text-box > span {
     display: block;
-    margin-top: 1.6vw;
+    margin-top: 6px;
     color: #555555;
-    font-size: 3.2vw;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: calc(3.2vw * (-2 / 100));
+    letter-spacing: calc(12px * (-2 / 100));
 }
 .cont-area .img-box {
     position: relative;
     width: 100%;
-    /* margin-top: 7.46vw; */
+    margin-top: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,13 +109,13 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 2.66vw;
+    gap:10px;
 }
 .swiper-button-wrap .swiper-button {
     width: 100%;
-    height: 14.66vw;
-    border-radius: 3.73vw;
-    font-size: 4.8vw;
+    height: 55px;
+    border-radius: 14px;
+    font-size: 18px;
     color: #fff;
     background: #496DDB;
 }
@@ -147,9 +146,12 @@
     left: 50%;
     bottom: 100%;
     transform: translateX(-50%);
-    margin-bottom: 4vw;
+    margin-bottom: 15px;
     color: #C2C2C5;
-    font-size: 4vw;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: calc(15px * (-4 / 100));
 }
 /* 하단 고정 버튼 */
 
@@ -176,7 +178,7 @@
     width: 90%;
     padding: 16px;
     background: #fff;
-    border-radius: 8vw;
+    border-radius: 30px;
     animation: slideUp 0.8s forwards;  
 }
 .on {
@@ -196,18 +198,18 @@
     display: block;
     width: 40px;
     height: 4px;
-    margin: 0 auto 2.13vw;
+    margin: 0 auto 8px;
     background: #E6E6E6;
 }
 .pop-area p {
-    font-size: 4.8vw;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.4;
-    letter-spacing: calc(4.8vw * (-2 / 100));
+    letter-spacing: calc(18px * (-2 / 100));
 }
 .pop-area .desc {
-    margin: 3.73vw 0 11.73vw;
-    font-size: 3.73vw;
+    margin: 14px 0 44px;
+    font-size: 14px;
     color: #555555;
     font-weight: 500;
 }
@@ -216,9 +218,9 @@
 }
 .pop-area button {
     width: 100%;
-    height: 14.66vw;
-    font-size: 4.8vw;
-    border-radius: 3.73vw;
+    height: 55px;
+    font-size: 18px;
+    border-radius: 14px;
     background: #496DDB;
     color: #fff;
 }
@@ -344,9 +346,9 @@
 }
 .btn-area button {
     width: 100%;
-    height: 14.66vw;
-    border-radius: 3.73vw;
-    font-size: 4.8vw;
+    height: 55px;
+    border-radius: 14px;
+    font-size: 18px;
     color: #fff;
     background: #496DDB;
 }
@@ -365,21 +367,22 @@
 /*___________________step4___________________*/
 .cont-area .info-box {
     margin-top: 10px;
+    padding: 0 16px;
+    border: 1px solid #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 16px;
 }
 .cont-area .info-box p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #5D5F65;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
-    color: #5D5F65;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
 }
 .cont-area .info-box p:nth-child(1) span {
     padding: 3px;
@@ -390,9 +393,9 @@
     flex-shrink: 0;
 }
 .cont-area .info-box p:nth-child(2) {
+    margin-top: 5px;
     font-size: 22px;
     font-weight: 600;
-    margin-top: 5px;
 }
 .code-input-block {
     margin-top: 30px;
@@ -403,9 +406,9 @@
     gap: 4px;
 }
 .code-input {
-    text-align: center;
     width: 34px;
     height: 42px;
+    text-align: center;
     border: 2px solid #496DDB;
     border-radius: 10px;
     font-size: 18px;
@@ -422,9 +425,9 @@
 }
 .code-input-block button.on {
     display: block;
-    background: url(../img/ico-reset.svg) no-repeat center / 100%;
     width: 17px;
     height: 17px;
+    background: url(../img/ico-reset.svg) no-repeat center / 100%;
 }
 .banner {
     display: block;
@@ -434,15 +437,15 @@
     width: 100%;
     z-index: 2;
 }
-/* step4 썸네일 */
+/* 썸네일 */
 .cont-area .img-box .thumb {
-    margin-top: 1.33vw;
-    border: 1px solid #F2EBEB;
     width:37.86vw;
-    border-radius: 12px;
+    margin-top: 1.33vw;
     padding: 2.13vw 1.86vw;
+    border: 1px solid #F2EBEB;
+    border-radius: 12px;
 }
-/* step4 썸네일 */
+/* 썸네일 */
 /*___________________step4___________________*/
 
 
