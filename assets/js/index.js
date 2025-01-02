@@ -55,7 +55,7 @@ var swiper = new Swiper('.swiper', {
                 $('.swiper-button-wrap .swiper-button-prev').html('다시 확인하기');
                 $('.swiper-button-wrap .swiper-button-next').html('정답 입력');
                 $('.swiper-button-wrap').css('transform', 'translateY(-48px)');
-                $('.input-block-wrap input').focus();
+                $('.input-block-wrap input:nth-of-type(1)').focus();
             } else {
                 $('.swiper .banner').remove();
                 $('.swiper-button-wrap').css('transform', 'translateY(0)');
