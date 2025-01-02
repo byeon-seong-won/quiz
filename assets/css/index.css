@@ -226,9 +226,60 @@
     color: #fff;
 }
 .pop-area.step02 img {
-    width: 51.2vw;
-    margin: 7.73vw auto 2.66vw;
+    width: 192px;
+    margin: 29px auto 13px;
 } 
+.pop-area.step03 > span {
+    width: 100%;
+    height: auto;
+    margin-top: 7px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: calc(12px * (-2 / 100));
+    color: #E52F2F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+.pop-area.step03 .img-box {
+    width: 120px;
+    margin: 30px auto 16px;
+    padding: 7px;
+    border: 1px solid #F2EBEB;
+    border-radius: 10px;
+}
+.pop-area.step03 .info-box {
+    margin: 16px 0 26px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pop-area.step03 .info-box p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #5D5F65;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.pop-area.step03 .info-box p:nth-child(1) span {
+    padding: 3px;
+    font-size: 8px;
+    color: #496DDB;
+    font-weight: 600;
+    border: 1px solid #496DDB;
+    flex-shrink: 0;
+}
+.pop-area.step03 .info-box p:nth-child(2) {
+    margin-top: 5px;
+    font-size: 22px;
+    font-weight: 600;
+}
 /* 팝업창 */
 
 /*___________________공통___________________*/
@@ -337,6 +388,7 @@
     margin-left: 1.6vw;
     background: url(../img/ico-copy.png) no-repeat center / 100%;
 }
+
 
 
 /* 하단 버튼 */

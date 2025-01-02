@@ -99,10 +99,10 @@ const step3_animation = lottie.loadAnimation({
 
 // 키워드복사하기 애니메이션
 function keywordAni() {
-    document.querySelectorAll('.img-box .keyword').forEach(button => {
+    document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
-    $('.img-box .keyword').addClass('animate');
+    $('.cont-area .img-box .keyword').addClass('animate');
 }
 
 
@@ -177,20 +177,20 @@ $('.pop-area .step01-btn').click(function() {
 
 
 // step2 상품비교 확인 팝업창
-// $('.swiper-button-next').click(function() {
-//     $('.pop-wrap.step02').addClass('on')
-// })
-// $('.pop-area .step02-btn').click(function() {
-//     swiper.slideTo(2);
-//     $('.pop-wrap.step02').removeClass('on')
-// })
-
-
-
-
 $('.swiper-button-next').click(function() {
-    $('.pop-wrap.step03').addClass('on')
+    $('.pop-wrap.step02').addClass('on')
 })
+$('.pop-area .step02-btn').click(function() {
+    swiper.slideTo(2);
+    $('.pop-wrap.step02').removeClass('on')
+})
+
+
+
+
+// $('.swiper-button-next').click(function() {
+//     $('.pop-wrap.step03').addClass('on')
+// })
 
 
 
