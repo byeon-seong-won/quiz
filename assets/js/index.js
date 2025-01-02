@@ -177,19 +177,33 @@ $('.pop-area .step01-btn').click(function() {
 
 
 // step2 상품비교 확인 팝업창
-$('.swiper-button-next').click(function() {
-    $('.pop-wrap.step02').addClass('on')
-})
-$('.pop-area .step02-btn').click(function() {
-    swiper.slideTo(2);
-    $('.pop-wrap.step02').removeClass('on')
-})
-
-
-
-
 // $('.swiper-button-next').click(function() {
-//     $('.pop-wrap.step03').addClass('on')
+//     $('.pop-wrap.step02').addClass('on')
+// })
+// $('.pop-area .step02-btn').click(function() {
+//     swiper.slideTo(2);
+//     $('.pop-wrap.step02').removeClass('on')
 // })
 
 
+
+
+$('.swiper-button-next').click(function() {
+    $('.pop-wrap.step03').addClass('on')
+})
+
+
+
+
+
+
+
+
+// --------------------- vibration api : 오답인경우 실행 --------------------- //
+function vibrateDevice() {
+    if ("vibrate" in navigator) {
+        navigator.vibrate([200, 100, 200, 100, 500]); // 진동 패턴
+    } else {
+        alert("Vibration API를 지원하지 않습니다.");
+    }
+}
