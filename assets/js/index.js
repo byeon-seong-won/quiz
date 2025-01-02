@@ -203,7 +203,7 @@ $('.swiper-button-next').click(function() {
 function vibrateDevice() {
     if ("vibrate" in navigator) {
         alert('vibrationnnnn')
-        navigator.vibrate([200, 100, 200, 100, 500]); // 진동 패턴
+        navigator.vibrate([200]); // 진동 패턴
     } else {
         alert("Vibration API를 지원하지 않습니다.");
     }
