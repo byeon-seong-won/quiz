@@ -533,6 +533,7 @@
     color: #494B50;
     flex-shrink: 0;
     caret-color: #496DDB;
+    border-radius: unset;
 }
 .input-block-wrap.wrong .text-input {
     border-bottom: 2px solid #E52F2F;
@@ -627,18 +628,26 @@
         font-size: 10px;
         letter-spacing: calc(10px*(-2 / 100));
     }
-
-
-
     .btn-area button {
-        height: 51px;
+        height: 41px;
         border-radius: 10px;
         font-size: 14px;
     }
-
-
-
-
+    .swiper-button-wrap {
+        bottom: 25px;
+        gap: 7px;
+    }
+    .swiper-button-wrap button {
+        margin-bottom: 11px;
+        font-size: 11px;
+        letter-spacing: calc(11px*(-4 / 100));
+    }
+    .swiper-button-wrap .swiper-button {
+        height: 41px;
+        border-radius: 10px;
+        font-size: 13px;
+        letter-spacing: calc(13px*(-5 / 100));
+    }
 
     /* 팝업창 */
     .pop-area {
@@ -663,21 +672,90 @@
         height: 3px;
         margin: 0 auto 6px;
     }
+    .pop-area.step02 img {
+        width: 143px;
+        margin: 22px auto 10px;
+    }
+    .pop-area.step03 .img-box {
+        width:90px;
+        margin: 22px auto 12px;
+        padding: 5px;
+        border-radius: 7px;
+    }
+    .pop-area.step03 .info-box {
+        margin: 12px 0 19px;
+        padding: 0 12px;
+    }
+    .pop-area.step03 .info-box p:nth-child(1) {
+        font-size: 10px;
+        gap: 3px;
+    }
+    .pop-area.step03 .info-box p:nth-child(1) span {
+        padding: 2px;
+        font-size: 10px;
+    }
+    .pop-area.step03 .info-box p:nth-child(2) {
+        margin-top: 4px;
+        font-size: 16px;
+    }
+    .pop-area.step03 > span {
+        margin-top: 5px;
+        font-size: 10px;
+        letter-spacing: calc(10px*(-2 / 100));
+    }
+    /* 팝업창 */
 
-    .swiper-button-wrap {
-        bottom: 25px;
-        gap: 7px;
+
+
+
+
+
+    /* step4 */
+    .cont-area .img-box .thumb {
+        width: 106px;
+        padding: 6px;
+        border-radius: 9px;
     }
-    .swiper-button-wrap button {
-        margin-bottom: 11px;
-        font-size: 11px;
-        letter-spacing: calc(11px*(-4 / 100));
+    .cont-area .info-box {
+        margin-top: 7px;
+        padding: 0 12px;
     }
-    .swiper-button-wrap .swiper-button {
-        height: 41px;
-        border-radius: 10px;
+    .cont-area .info-box p:nth-child(1) {
+        font-size: 10px;
+        gap: 3px;
+    }
+    .cont-area .info-box p:nth-child(1) span {
+        padding: 2px;
+        font-size: 6px;
+    }
+    .cont-area .info-box p:nth-child(2) {
+        margin-top: 4px;
+        font-size: 16px;
+    }
+    .input-block-wrap {
+        margin-top: 22px;
+        gap: 3px;
+    }
+    .text-input {
+        height: 27px;
+        padding-right: 22px;
         font-size: 13px;
-        letter-spacing: calc(13px*(-5 / 100));
     }
+    .input-block-wrap button {
+        width: 18px;
+        height: 18px;
+        background: url(../img/ico-reset.svg) no-repeat center / 13px 13px;
+    }
+    .input-block-wrap button.default {
+        position: absolute;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    /* step4 */
+
+
+
+
+
 
 }

@@ -188,9 +188,9 @@ $('.pop-area .step02-btn').click(function() {
 
 
 
-// $('.swiper-button-next').click(function() {
-//     $('.pop-wrap.step03').addClass('on')
-// })
+$('.swiper-button-next').click(function() {
+    $('.pop-wrap.step03').addClass('on')
+})
 
 
 
