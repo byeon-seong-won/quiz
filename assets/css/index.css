@@ -524,7 +524,7 @@
     .cont-area {
         margin-top:38px;
     }
-    .img-box {
+    .cont-area .img-box {
         margin-top: 20px;
     }
 }
@@ -533,8 +533,100 @@
     .cont-area {
         margin-top:28px;
     }
-    .img-box {
+    .cont-area .img-box {
         margin-top: 18px;
     }
 }
 
+
+
+
+
+
+
+
+
+/* 280px 작은모바일 대응 */
+@media screen and (max-width: 280px) {
+    .header-area {
+        height: 45px;
+    }
+    .header-area a {
+        width: 24px;
+        height: 24px;
+    }
+    .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+        top: 45px !important;
+        height: 4px !important;
+    }
+    .header-area button {
+        padding: 6px 10px;
+        font-size: 10px;
+        letter-spacing: calc(10px*(-2 / 100));
+    }
+    .cont-area .text-box {
+        min-height: 61px;
+    }
+    .cont-area .text-box p {
+        font-size: 16px;
+        letter-spacing: calc(16px*(-2 / 100));
+    }
+    .cont-area .text-box > span {
+        margin-top: 4px;
+        font-size: 10px;
+        letter-spacing: calc(10px*(-2 / 100));
+    }
+
+
+
+    .btn-area button {
+        height: 51px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+
+
+
+
+    /* 팝업창 */
+    .pop-area {
+        padding: 10px;
+        border-radius: 22px;
+    }
+    .pop-area p {
+        font-size: 13px;
+        letter-spacing: calc(13px*(-2 / 100));
+    }
+    .pop-area .desc {
+        margin: 10px 0 33px;
+        font-size: 10px;
+    }
+    .pop-area button {
+        height: 41px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    .pop-area > span {
+        width: 30px;
+        height: 3px;
+        margin: 0 auto 6px;
+    }
+
+    .swiper-button-wrap {
+        bottom: 25px;
+        gap: 7px;
+    }
+    .swiper-button-wrap button {
+        margin-bottom: 11px;
+        font-size: 11px;
+        letter-spacing: calc(11px*(-4 / 100));
+    }
+    .swiper-button-wrap .swiper-button {
+        height: 41px;
+        border-radius: 10px;
+        font-size: 13px;
+        letter-spacing: calc(13px*(-5 / 100));
+    }
+
+}
