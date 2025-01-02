@@ -202,6 +202,7 @@ $('.pop-area .step02-btn').click(function() {
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
 function vibrateDevice() {
     if ("vibrate" in navigator) {
+        alert('vibrationnnnn')
         navigator.vibrate([200, 100, 200, 100, 500]); // 진동 패턴
     } else {
         alert("Vibration API를 지원하지 않습니다.");
