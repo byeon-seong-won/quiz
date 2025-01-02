@@ -201,6 +201,7 @@
     height: 4px;
     margin: 0 auto 8px;
     background: #E6E6E6;
+    border-radius: 10px;
 }
 .pop-area p {
     font-size: 18px;
@@ -455,7 +456,6 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4px;
 }
 .input-block-wrap input:focus {
     outline: none;
@@ -490,6 +490,9 @@
     color: #494B50;
     flex-shrink: 0;
     caret-color: #496DDB;
+}
+.code-input:not(:first-of-type) {
+    margin-left: 4px;
 }
 
 /* 잘못입력시 */
@@ -671,6 +674,7 @@
         width: 30px;
         height: 3px;
         margin: 0 auto 6px;
+        border-radius: 7px;
     }
     .pop-area.step02 img {
         width: 143px;
@@ -734,13 +738,15 @@
     }
     .input-block-wrap {
         margin-top: 22px;
-        gap: 3px;
     }
     .code-input {
         width: 25px;
         height: 31px;
         border-radius: 7px;
         font-size: 13px;
+    }
+    .code-input:not(:first-of-type) {
+        margin-left: 3px;
     }
     .text-input {
         height: 27px;
