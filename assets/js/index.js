@@ -14,7 +14,7 @@ var swiper = new Swiper('.swiper', {
         init: function() {
             // 초기 세팅 (첫번째 슬라이드만)
             $('.swiper-button-prev, .swiper-button-next').hide(); 
-            $('.btn-area.copy').show(); 
+            $('.btn-area').show(); 
             keywordAni();
         },
         slideChange: function() {
@@ -23,27 +23,27 @@ var swiper = new Swiper('.swiper', {
             // step1
             if (idx === 0) { 
                 $('.swiper-button-prev, .swiper-button-next').hide(); 
-                $('.btn-area.copy').show(); 
+                $('.btn-area').show(); 
             } else {
                 $('.swiper-button-prev, .swiper-button-next').show(); 
-                $('.btn-area.copy').hide(); 
+                $('.btn-area').hide(); 
             }
 
             // step2
             if (idx === 1) { 
                 const skipTxt = '<button>가이드 건너뛰기</button>';
-                $('.btn-area.flex').prepend(skipTxt);
+                $('.swiper-button-wrap').prepend(skipTxt);
                 step2_animation.goToAndStop(0, true);
                 step2_animation.play();
             
             } else {
-                $('.btn-area.flex button').remove();
+                $('.swiper-button-wrap button').remove();
             }
 
             // step3
             if (idx === 2) { 
-                $('.btn-area.flex .swiper-button-prev').html('이전');
-                $('.btn-area.flex .swiper-button-next').html('미션 시작');
+                $('.swiper-button-wrap .swiper-button-prev').html('이전');
+                $('.swiper-button-wrap .swiper-button-next').html('미션 시작');
                 step3_animation.goToAndStop(0, true);
                 step3_animation.play();
             }
@@ -52,17 +52,17 @@ var swiper = new Swiper('.swiper', {
             if (idx === 3) { 
                 const imgTag = '<a href="#" class="banner"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.swiper').append(imgTag);
-                $('.btn-area.flex .swiper-button-prev').html('다시 확인하기');
-                $('.btn-area.flex .swiper-button-next').html('정답 입력');
-                $('.btn-area.flex').css('transform', 'translateY(-48px)');
+                $('.swiper-button-wrap .swiper-button-prev').html('다시 확인하기');
+                $('.swiper-button-wrap .swiper-button-next').html('정답 입력');
+                $('.swiper-button-wrap').css('transform', 'translateY(-48px)');
             } else {
                 $('.swiper .banner').remove();
-                $('.btn-area.flex').css('transform', 'translateY(0)');
+                $('.swiper-button-wrap').css('transform', 'translateY(0)');
             }
 
             if(!(idx === 2 || idx === 3)) {
-                $('.btn-area.flex .swiper-button-prev').html('이전');
-                $('.btn-area.flex .swiper-button-next').html('다음');
+                $('.swiper-button-wrap .swiper-button-prev').html('이전');
+                $('.swiper-button-wrap .swiper-button-next').html('다음');
             }
         }
     }
@@ -164,7 +164,7 @@ function reset(){
 // --------------------- 팝업창 관련 --------------------- //
 
 // step1 키워드복사클릭시 팝업창
-$('.btn-area.copy button').click(function() {
+$('.btn-area button').click(function() {
     $('.pop-wrap.step01').addClass('on')
 })
 
@@ -176,19 +176,19 @@ $('.pop-area .step01-btn').click(function() {
 
 
 // step2 상품비교 확인 팝업창
-// $('.swiper-button-next').click(function() {
-//     $('.pop-wrap.step02').addClass('on')
-// })
-// $('.pop-area .step02-btn').click(function() {
-//     swiper.slideTo(2);
-//     $('.pop-wrap.step02').removeClass('on')
-// })
-
-
-
-
 $('.swiper-button-next').click(function() {
-    $('.pop-wrap.step03').addClass('on')
+    $('.pop-wrap.step02').addClass('on')
 })
+$('.pop-area .step02-btn').click(function() {
+    swiper.slideTo(2);
+    $('.pop-wrap.step02').removeClass('on')
+})
+
+
+
+
+// $('.swiper-button-next').click(function() {
+//     $('.pop-wrap.step03').addClass('on')
+// })
 
 
