@@ -208,3 +208,7 @@ function vibrateDevice() {
         alert("Vibration API를 지원하지 않습니다.");
     }
 }
+
+
+
+

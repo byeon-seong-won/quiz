@@ -461,9 +461,6 @@
 .input-block-wrap input:focus {
     outline: none;
 }
-/* .input-block-wrap button {
-    display: none;
-} */
 .input-block-wrap button {
     width: 24px;
     height: 24px;
