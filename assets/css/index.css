@@ -19,23 +19,23 @@
 
 /* header */
 .header-area {
-    height: 16vw;
-    padding: 3.46vw 0;
+    height: 60px;
+    padding: 18px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .header-area a {
-    width: 8.53vw;
-    height: 8.53vw;
-    margin-left: -3.2vw;
+    width: 32px;
+    height: 32px;
+    margin-left: -12px;
     background: url(../img/ico-back.png) no-repeat center / 100%;
 }
 .header-area button {
-    padding: 2.13vw 3.2vw;
-    font-size: 3.2vw;
+    padding: 8px 12px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: calc(3.2vw * (-2 / 100));
+    letter-spacing: calc(12px * (-2 / 100));
     color: #485566;
     background: #F5F4F9;
     border-radius: 4px;
