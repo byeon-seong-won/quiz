@@ -118,6 +118,7 @@
     font-size: 18px;
     color: #fff;
     background: #496DDB;
+    letter-spacing: calc(18px * (-5 / 100));
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -368,7 +369,6 @@
 .cont-area .info-box {
     margin-top: 10px;
     padding: 0 16px;
-    border: 1px solid #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,7 +397,7 @@
     font-size: 22px;
     font-weight: 600;
 }
-.code-input-block {
+.input-block-wrap {
     margin-top: 30px;
     display: flex;
     align-items: center;
@@ -405,6 +405,27 @@
     flex-wrap: wrap;
     gap: 4px;
 }
+.input-block-wrap input:focus {
+    outline: none;
+}
+/* .input-block-wrap button {
+    display: none;
+} */
+.input-block-wrap button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url(../img/ico-reset.svg) no-repeat center / 17px 17px;
+}
+
+.input-block-wrap button
+
+
+
+/* ------- type1 : 자릿수 블록 ------- */
 .code-input {
     width: 34px;
     height: 42px;
@@ -417,18 +438,61 @@
     flex-shrink: 0;
     caret-color: #496DDB;
 }
-.code-input:focus {
-    outline: none;
+
+/* 잘못입력시 */
+.input-block-wrap.wrong .code-input {
+    border: 2px solid #E52F2F;
 }
-.code-input-block button {
-    display: none;
+.input-block-wrap.wrong span {
+    color: #E52F2F;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: calc(14px * (-3 / 100));
+    margin-right: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
-.code-input-block button.on {
-    display: block;
-    width: 17px;
-    height: 17px;
-    background: url(../img/ico-reset.svg) no-repeat center / 100%;
+.input-block-wrap.wrong span::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url(../img/ico-notice.png) no-repeat center / 100%;
 }
+/* 잘못입력시 */
+/* ------- type1 : 자릿수 블록 ------- */
+
+
+
+/* ------- type2 : 기본 입력창 ------- */
+.input-block-wrap > div {
+    position: relative;
+    width: 100%;
+}
+.text-input {
+    width: 100%;
+    height: 36px;
+    padding-right: 30px;
+    border-bottom: 2px solid #496DDB;
+    font-size: 18px;
+    font-weight: 600;
+    color: #494B50;
+    flex-shrink: 0;
+    caret-color: #496DDB;
+}
+.input-block-wrap.wrong .text-input {
+    border-bottom: 2px solid #E52F2F;
+}
+
+
+
+/* ------- type2 : 기본 입력창 ------- */
+
+
+
+
+
 .banner {
     display: block;
     position: fixed;
@@ -439,9 +503,8 @@
 }
 /* 썸네일 */
 .cont-area .img-box .thumb {
-    width:37.86vw;
-    margin-top: 1.33vw;
-    padding: 2.13vw 1.86vw;
+    width: 142px;
+    padding: 8px;
     border: 1px solid #F2EBEB;
     border-radius: 12px;
 }
