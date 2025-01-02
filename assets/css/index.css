@@ -65,7 +65,7 @@
     height: 100%;
 }
 .cont-area {
-    margin-top: 48px;
+    margin-top: 5.91vh;
     display: flex;
     flex-direction: column;
 }
@@ -421,7 +421,6 @@
     background: url(../img/ico-reset.svg) no-repeat center / 17px 17px;
 }
 
-.input-block-wrap button
 
 
 
