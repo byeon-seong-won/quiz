@@ -11,12 +11,13 @@ var swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
     on: {
+        // 초기 세팅
         init: function() {
-            // 초기 세팅 (첫번째 슬라이드만 버튼 커스텀)
             $('.swiper-button-prev, .swiper-button-next').hide(); 
             $('.btn-area').show(); 
             keywordAni();
         },
+        // 슬라이드 전환시
         slideChange: function() {
             const idx = this.realIndex;
             
