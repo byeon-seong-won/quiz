@@ -44,7 +44,19 @@ body {
     font-family: 'Pretendard';
     font-weight: 500;
     color: #000;
+    line-height: 1.4;
 }
+
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0;
+}
+
 
 
 
