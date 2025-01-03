@@ -50,6 +50,7 @@
     top: 60px !important;
     width: 100% !important;
     height: 5px !important;
+    background: #EFEEF5 !important;
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: #496DDB !important;
@@ -433,7 +434,7 @@
     --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
     --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
     --font-shadow: var(--font-size);
-    --y: var(--move-hover);
+    /* --y: var(--move-hover); */
     line-height: var(--font-size);
     letter-spacing: 0.5px;
     border-radius: 11px;
@@ -447,7 +448,7 @@
     background: var(--background);
     color: var(--text);
     box-shadow: var(--shadow);
-    transform: translateY(var(--y)) translateZ(0);
+    transform: translateZ(0);
     transition: transform var(--duration) ease, box-shadow var(--duration) ease;
 }
 .cont-area .img-box .keyword div {
@@ -497,7 +498,6 @@
     transition-delay: 0.55s;
 }
 .cont-area .img-box .keyword.animate {
-    --y: var(--move-hover)
     --shadow:var(--shadow-hover)
 }
 .cont-area .img-box .keyword.animate span {
