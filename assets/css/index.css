@@ -296,7 +296,8 @@
     transform: translate(-50%,-50%);
     z-index: 1;
     width: 90%;
-    padding: 20px 16px 16px;
+    height: 233px;
+    padding: 0 16px 16px;
     background: #fff;
     border-radius: 30px;
     display: flex;
@@ -307,14 +308,49 @@
 .sub-pop-area > div {
     width: 100%;
 }
+
+
+/* 로티 커스텀 */
 .sub-pop-area dotlottie-player {
-    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
+.sub-pop-area .pop01 dotlottie-player {
+    height: 98px;
+}
+.sub-pop-area .pop02 dotlottie-player {
+    height: 90px;
+}
+.sub-pop-area .pop03 dotlottie-player {
+    top: 25px;
+    height: 44px;
+}
+.sub-pop-area .pop04 dotlottie-player {
+    top: 17px;
+    height: 55px;
+}
+.sub-pop-area .pop05 dotlottie-player {
+    top: 15px;
+    height: 65px;
+}
+.sub-pop-area .pop06 dotlottie-player {
+    top: 15px;
+    height: 65px;
+}
+.sub-pop-area .pop07 dotlottie-player {
+    top: 25px;
+    height: 44px;
+}
+/* 로티 커스텀 */
+
+
 .sub-pop-area .type1 {
     text-align: center;
 }
 .sub-pop-area .type1 p:nth-of-type(1) {
-    margin-top: 10px;
+    margin-top: 85px;
     font-size: 22px;
     font-weight: 600;
     letter-spacing: -0.4px;
@@ -921,11 +957,42 @@
 
     /* sub 팝업창 */
     .sub-pop-area {
-        padding: 15px 12px 12px;
+        padding: 0 12px 12px;
         border-radius: 22px;
+        height: 174px;
     }
+
+    /* 로티 커스텀 */
+    .sub-pop-area .pop01 dotlottie-player {
+        height: 73px;
+    }
+    .sub-pop-area .pop02 dotlottie-player {
+        height: 67px;
+    }
+    .sub-pop-area .pop03 dotlottie-player {
+        top: 19px;
+        height: 33px;
+    }
+    .sub-pop-area .pop04 dotlottie-player {
+        top: 13px;
+        height: 41px;
+    }
+    .sub-pop-area .pop05 dotlottie-player {
+        top: 11px;
+        height: 65px;
+    }
+    .sub-pop-area .pop06 dotlottie-player {
+        top: 11px;
+        height: 49px;
+    }
+    .sub-pop-area .pop07 dotlottie-player {
+        top: 25px;
+        height: 44px;
+    }
+    /* 로티 커스텀 */
+
     .sub-pop-area .type1 p:nth-of-type(1) {
-        margin-top: 7px;
+        margin-top: 63px;
         font-size: 16px;
         letter-spacing: -0.3px;
     }
