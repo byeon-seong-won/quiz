@@ -3,7 +3,6 @@
 
 
 /*___________________공통___________________*/
-
 .wrap {
     height: 100%;
     padding: 0 5.33vw;
@@ -38,6 +37,7 @@
     color: #485566;
     background: #F5F4F9;
     border-radius: 4px;
+    line-height: normal;
 }
 /* header */
 
@@ -87,6 +87,7 @@
     font-size: 12px;
     font-weight: 600;
     letter-spacing: -0.2px;
+    line-height: normal;
 }
 .cont-area .img-box {
     position: relative;
@@ -97,6 +98,7 @@
     justify-content: center;
     align-self: center;
 }
+/* 컨텐츠 */
 
 
 
@@ -118,6 +120,7 @@
     color: #fff;
     background: #496DDB;
     letter-spacing:-0.9px;
+    line-height: normal;
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -156,7 +159,7 @@
 
 
 
-/* step 팝업창 */
+/* step별 팝업창 */
 .dimmedarea {
     background: rgba(0, 0, 0,0.5);
     position: fixed;
@@ -193,7 +196,7 @@
         opacity: 1;
     }
 }
-.pop-area > span {
+.pop-wrap .bar {
     display: block;
     width: 40px;
     height: 4px;
@@ -201,22 +204,22 @@
     background: #E6E6E6;
     border-radius: 10px;
 }
-.pop-area p {
+.pop-wrap p {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.4px;
 }
-.pop-area .desc {
+.pop-wrap .desc {
     margin: 14px 0 44px;
     font-size: 14px;
     color: #555555;
     font-weight: 500;
     letter-spacing: -0.3px;
 }
-.pop-area .mark {
+.pop-wrap .mark {
     color: #496DDB;
 }
-.pop-area button {
+.pop-wrap button {
     width: 100%;
     height: 55px;
     font-size: 18px;
@@ -224,32 +227,32 @@
     background: #496DDB;
     color: #fff;
     letter-spacing: -0.9px;
+    line-height: normal;
 }
-.pop-area.step02 img {
+.pop-wrap.step02 img {
     width: 192px;
     margin: 29px auto 13px;
 } 
-.pop-area.step03 > span {
-    width: 100%;
-    height: auto;
+.pop-wrap.step03 .adtxt {
     margin-top: 7px;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: -0.2px;
+    line-height: normal;
     color: #E52F2F;
     display: flex;
     align-items: center;
     justify-content: center;
     background: transparent;
 }
-.pop-area.step03 .img-box {
+.pop-wrap.step03 .img-box {
     width: 120px;
     margin: 30px auto 16px;
     padding: 7px;
     border: 1px solid #F2EBEB;
     border-radius: 10px;
 }
-.pop-area.step03 .info-box {
+.pop-wrap.step03 .info-box {
     margin: 16px 0 26px;
     padding: 0 16px;
     display: flex;
@@ -257,7 +260,7 @@
     justify-content: center;
     align-items: center;
 }
-.pop-area.step03 .info-box p:nth-child(1) {
+.pop-wrap.step03 .info-box p:nth-child(1) {
     font-size: 14px;
     font-weight: 500;
     text-align: center;
@@ -266,8 +269,9 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
+    line-height: normal;
 }
-.pop-area.step03 .info-box p:nth-child(1) span {
+.pop-wrap.step03 .info-box p:nth-child(1) span {
     padding: 3px;
     font-size: 8px;
     color: #496DDB;
@@ -275,14 +279,12 @@
     border: 1px solid #496DDB;
     flex-shrink: 0;
 }
-.pop-area.step03 .info-box p:nth-child(2) {
+.pop-wrap.step03 .info-box p:nth-child(2) {
     margin-top: 5px;
     font-size: 22px;
     font-weight: 600;
 }
-/* step 팝업창 */
-
-
+/* step별 팝업창 */
 
 
 /* sub 팝업창 */
@@ -335,6 +337,7 @@
     background: #496DDB;
     color: #fff;
     letter-spacing: -0.9px;
+    line-height: normal;
 }
 
 /* 문의하기 */
@@ -347,12 +350,14 @@
     margin-top: 4px;
     font-size: 20px;
     font-weight: 600;
+    letter-spacing: -0.4px;
     text-align: center;
 }
 .sub-pop-area .type2 label {
     margin-bottom: 6px;
     font-size: 16px;
     font-weight: 600;
+    letter-spacing: -0.3px;
 }
 .sub-pop-area .type2 label:nth-of-type(1) {
     margin-top: 24px;
@@ -366,7 +371,11 @@
     font-size: 15px;
     font-weight: 400;
     border-radius: 8px; 
+    letter-spacing: -0.3px;
     border: 1px solid #EDEDED; 
+}
+.sub-pop-area .type2 textarea {
+    min-height: 143px;
 }
 .sub-pop-area .type2 input::placeholder {
     color: #818284;
@@ -379,12 +388,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    letter-spacing: -0.9px;
     gap: 9px;
 }
 .sub-pop-area .type2 .btn-box button {
     height: 100%;
     border-radius: 14px;
     flex: 1;
+    line-height: normal;
 }
 .sub-pop-area .type2 .btn-box button:nth-child(1) {
     background: #EBEBEB;
@@ -396,11 +407,6 @@
 }
 /* 문의하기 */
 /* sub 팝업창 */
-
-
-
-
-
 /*___________________공통___________________*/
 
 
@@ -525,6 +531,7 @@
     font-weight: 500;
     color: #fff;
     background: #496DDB;
+    line-height: normal;
 }
 /*___________________step1___________________*/
 
@@ -557,6 +564,7 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
+    line-height: normal;
 }
 .cont-area .info-box p:nth-child(1) span {
     padding: 3px;
@@ -626,6 +634,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    line-height: 100%;
 }
 .input-block-wrap.wrong span::before {
     content: '';
@@ -659,9 +668,6 @@
     border-bottom: 2px solid #E52F2F;
 }
 /* ------- type2 : 기본 입력창 ------- */
-
-
-
 
 
 .banner {
@@ -732,24 +738,25 @@
     .header-area button {
         padding: 6px 10px;
         font-size: 10px;
-        letter-spacing: calc(10px*(-2 / 100));
+        letter-spacing: -0.2px;
     }
     .cont-area .text-box {
         min-height: 61px;
     }
     .cont-area .text-box p {
         font-size: 16px;
-        letter-spacing: calc(16px*(-2 / 100));
+        letter-spacing: -0.3px;
     }
     .cont-area .text-box > span {
         margin-top: 4px;
         font-size: 10px;
-        letter-spacing: calc(10px*(-2 / 100));
+        letter-spacing: -0.2px;
     }
     .btn-area button {
         height: 41px;
         border-radius: 10px;
         font-size: 14px;
+        letter-spacing: -0.7px;
     }
     .swiper-button-wrap {
         bottom: 25px;
@@ -758,69 +765,75 @@
     .swiper-button-wrap button {
         margin-bottom: 11px;
         font-size: 11px;
-        letter-spacing: calc(11px*(-4 / 100));
+        letter-spacing: -0.4px;
     }
     .swiper-button-wrap .swiper-button {
         height: 41px;
         border-radius: 10px;
         font-size: 13px;
-        letter-spacing: calc(13px*(-5 / 100));
+        letter-spacing: -0.7px;
     }
 
     /* 팝업창 */
-    .pop-area {
+    .pop-wrap {
         padding: 10px;
         border-radius: 22px;
     }
-    .pop-area p {
+    .pop-wrap p {
         font-size: 13px;
-        letter-spacing: calc(13px*(-2 / 100));
+        letter-spacing: -0.3px;
     }
-    .pop-area .desc {
+    .pop-wrap .desc {
         margin: 10px 0 33px;
         font-size: 10px;
+        letter-spacing: -0.2px;
     }
-    .pop-area button {
+    .pop-wrap button {
         height: 41px;
         border-radius: 10px;
         font-size: 14px;
+        letter-spacing: -0.7px;
     }
-    .pop-area > span {
+    .pop-wrap .bar {
         width: 30px;
         height: 3px;
         margin: 0 auto 6px;
         border-radius: 7px;
     }
-    .pop-area.step02 img {
+    .pop-wrap.step02 img {
         width: 143px;
         margin: 22px auto 10px;
     }
-    .pop-area.step03 .img-box {
+    .pop-wrap.step03 .img-box {
         width:90px;
         margin: 22px auto 12px;
         padding: 5px;
         border-radius: 7px;
     }
-    .pop-area.step03 .info-box {
+    .pop-wrap.step03 .info-box {
         margin: 12px 0 19px;
         padding: 0 12px;
     }
-    .pop-area.step03 .info-box p:nth-child(1) {
+    .pop-wrap.step03 .info-box p:nth-child(1) {
         font-size: 10px;
+        letter-spacing: -0.2px;
         gap: 3px;
     }
-    .pop-area.step03 .info-box p:nth-child(1) span {
+    .pop-wrap.step03 .info-box p:nth-child(1) span {
         padding: 2px;
         font-size: 10px;
+        letter-spacing: -0.2px;
     }
-    .pop-area.step03 .info-box p:nth-child(2) {
+    .pop-wrap.step03 .info-box p:nth-child(2) {
         margin-top: 4px;
         font-size: 16px;
+        letter-spacing: -0.3px;
     }
-    .pop-area.step03 > span {
+    .pop-wrap.step03 .adtxt {
         margin-top: 5px;
         font-size: 10px;
-        letter-spacing: calc(10px*(-2 / 100));
+        letter-spacing: -0.2px;
+        line-height: normal;
     }
     /* 팝업창 */
 
@@ -841,15 +854,18 @@
     }
     .cont-area .info-box p:nth-child(1) {
         font-size: 10px;
+        letter-spacing: -0.2px;
         gap: 3px;
     }
     .cont-area .info-box p:nth-child(1) span {
         padding: 2px;
-        font-size: 6px;
+        font-size: 10px;
+        letter-spacing: -0.2px;
     }
     .cont-area .info-box p:nth-child(2) {
         margin-top: 4px;
         font-size: 16px;
+        letter-spacing: -0.3px;
     }
     .input-block-wrap {
         margin-top: 22px;
@@ -865,6 +881,7 @@
         height: 27px;
         padding-right: 22px;
         font-size: 13px;
+        letter-spacing: -0.3px;
     }
     .input-block-wrap button {
         width: 18px;
@@ -882,13 +899,59 @@
 
 
     /* sub 팝업창 */
+    .sub-pop-area {
+        padding: 15px 12px 12px;
+        border-radius: 22px;
+    }
     .sub-pop-area .type1 p:nth-of-type(1) {
         margin-top: 7px;
         font-size: 16px;
-
+        letter-spacing: -0.3px;
     }
-
-
-
+    .sub-pop-area .type1 p:nth-of-type(2) {
+        margin-top: 4px;
+        font-size: 13px;
+        letter-spacing: -0.3px;
+    }
+    .sub-pop-area .type1 button {
+        height:41px;
+        margin-top: 12px;
+        font-size: 13px;
+        border-radius: 10px;
+        letter-spacing: -0.7px;
+    }
+    /* 문의하기 */
+    .sub-pop-area .type2 h2 {
+        margin-top: 3px;
+        font-size: 15px;
+        letter-spacing: -0.3px;
+    }
+    .sub-pop-area .type2 label {
+        margin-bottom: 4px;
+        font-size: 12px;
+        letter-spacing: -0.2px;
+    }
+    .sub-pop-area .type2 label:nth-of-type(1) {
+        margin-top: 18px;
+    }
+    .sub-pop-area .type2 input, .sub-pop-area .type2 textarea {
+        padding: 6px;
+        font-size: 11px;
+        border-radius: 6px;
+        letter-spacing: -0.2px;
+    }
+    .sub-pop-area .type2 textarea {
+        min-height: 106px;
+    }
+    .sub-pop-area .type2 .btn-box {
+        height: 41px;
+        margin-top: 18px;
+        font-size: 13px;
+        letter-spacing: -0.7px;
+        gap: 7px;
+    }
+    .sub-pop-area .type2 .btn-box button {
+        border-radius: 10px;
+    }
 
 }

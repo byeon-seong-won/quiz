@@ -12,10 +12,9 @@ var swiper = new Swiper('.swiper', {
     },
     on: {
         init: function() {
-            // 초기 세팅 (첫번째 슬라이드만)
+            // 초기 세팅 (첫번째 슬라이드만 버튼 커스텀텀)
             $('.swiper-button-prev, .swiper-button-next').hide(); 
             $('.btn-area').show(); 
-            keywordAni();
         },
         slideChange: function() {
             const idx = this.realIndex;
@@ -35,6 +34,15 @@ var swiper = new Swiper('.swiper', {
                 $('.swiper-button-wrap').prepend(skipTxt);
                 step2_animation.goToAndStop(0, true);
                 step2_animation.play();
+
+                $('.swiper-button-next').off('click').on('click', function(e) {
+                    e.preventDefault();
+                    $('.pop-wrap.step02').addClass('on')
+                })
+                $('.pop-wrap .step02-btn').click(function() {
+                    swiper.slideTo(2);
+                    $('.pop-wrap.step02').removeClass('on')
+                })
             
             } else {
                 $('.swiper-button-wrap button').remove();
@@ -46,6 +54,14 @@ var swiper = new Swiper('.swiper', {
                 $('.swiper-button-wrap .swiper-button-next').html('미션 시작');
                 step3_animation.goToAndStop(0, true);
                 step3_animation.play();
+
+                $('.swiper-button-next').off('click').on('click', function() {
+                    $('.pop-wrap.step03').addClass('on')
+                })
+                $('.pop-wrap .step03-btn').click(function() {
+                    swiper.slideTo(3);
+                    $('.pop-wrap.step03').removeClass('on')
+                })
             }
 
             // step4
@@ -73,8 +89,9 @@ var swiper = new Swiper('.swiper', {
 
 
 
-// 로티애니메이션 로드
-// Lottie 애니메이션 로드
+
+
+//________________________ step별 애니메이션 ________________________//
 const step2_animation = lottie.loadAnimation({
   container: document.getElementById('step02'),
   path: 'assets/json/hash_step2.json',
@@ -89,6 +106,7 @@ const step3_animation = lottie.loadAnimation({
   loop: true,
   autoplay: true,
 });
+//________________________ step별 애니메이션 ________________________//
 
 
 
@@ -97,13 +115,17 @@ const step3_animation = lottie.loadAnimation({
 
 
 
-// 키워드복사하기 애니메이션
+
+
+
+//________________________ 키워드복사하기 애니메이션 ________________________//
 function keywordAni() {
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
     $('.cont-area .img-box .keyword').addClass('animate');
 }
+//________________________ 키워드복사하기 애니메이션 ________________________//
 
 
 
@@ -112,7 +134,10 @@ function keywordAni() {
 
 
 
-// 정답입력 키보드 대응(ios) 
+
+
+
+//________________________ 정답입력 키보드 대응(ios) ________________________//
 let prevVisualViewport = 0;
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent); // iOS 디바이스인지 체크
 
@@ -130,6 +155,7 @@ const handleVisualViewportResize = () => {
 if (isIOS) {
   window.visualViewport.onresize = handleVisualViewportResize; //visualViewPort가 변경될 때 마다 호출
 }
+//________________________ 정답입력 키보드 대응(ios) ________________________//
 
 
 
@@ -139,58 +165,35 @@ if (isIOS) {
 
 
 
-// 정답입력 텍스트 입력시 초기화버튼 노출
-$('.code-input-block button').addClass('on');
 
 
-// 정답입력 초기화버튼
-function reset(){
-	document.querySelectorAll("input[type=text]")[0].value="";
-}
-
-
-
-
-
-// 가이드건너뛰기 클릭시
-
-
-
-
-
-
-
-
-
-// --------------------- 팝업창 관련 --------------------- //
-
+//________________________step별 팝업창________________________//
 // step1 키워드복사클릭시 팝업창
 $('.btn-area button').click(function() {
     $('.pop-wrap.step01').addClass('on')
 })
 
-$('.pop-area .step01-btn').click(function() {
+$('.pop-wrap .step01-btn').click(function() {
     swiper.slideTo(1);
     $('.pop-wrap.step01').removeClass('on')
 })
 
 
-
 // step2 상품비교 확인 팝업창
-$('.swiper-button-next').click(function() {
-    $('.pop-wrap.step02').addClass('on')
-})
-$('.pop-area .step02-btn').click(function() {
-    swiper.slideTo(2);
-    $('.pop-wrap.step02').removeClass('on')
-})
+// $('.swiper-button-next').click(function() {
+//     $('.pop-wrap.step02').addClass('on')
+// })
+// $('.pop-area .step02-btn').click(function() {
+//     swiper.slideTo(2);
+//     $('.pop-wrap.step02').removeClass('on')
+// })
+
+// $('.swiper-button-next').click(function() {
+//     $('.pop-wrap.step03').addClass('on')
+// })
+//________________________step별 팝업창________________________//
 
 
-
-
-$('.swiper-button-next').click(function() {
-    $('.pop-wrap.step03').addClass('on')
-})
 
 
 
@@ -200,14 +203,14 @@ $('.swiper-button-next').click(function() {
 
 
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
-function vibrateDevice() {
-    if ("vibrate" in navigator) {
-        alert('vibrationnnnn')
-        navigator.vibrate([200]); // 진동 패턴
-    } else {
-        alert("Vibration API를 지원하지 않습니다.");
-    }
-}
+// function vibrateDevice() {
+//     if ("vibrate" in navigator) {
+//         alert('vibrationnnnn')
+//         navigator.vibrate([200]); 
+//     } else {
+//         alert("Vibration API를 지원하지 않습니다.");
+//     }
+// }
 
 
 
