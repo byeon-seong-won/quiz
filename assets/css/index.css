@@ -85,7 +85,7 @@
     margin-top: 6px;
     color: #555555;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.2px;
     line-height: normal;
 }
@@ -152,7 +152,7 @@
     margin-bottom: 15px;
     color: #C2C2C5;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.6px;
 }
 /* 하단 고정 버튼 */
@@ -509,9 +509,9 @@
 
 .cont-area .img-box .keyword:after {
     content: '';
-    width: 3.46vw;
-    height: 3.73vw;
-    margin-left: 1.6vw;
+    width: 13px;
+    height: 14px;
+    margin-left: 6px;
     background: url(../img/ico-copy.png) no-repeat center / 100%;
 }
 
@@ -529,7 +529,6 @@
     border-radius: 14px;
     font-size: 18px;
     letter-spacing: -0.9px;
-    font-weight: 500;
     color: #fff;
     background: #496DDB;
     line-height: normal;
@@ -852,6 +851,13 @@
         letter-spacing: -0.6px;
         border-radius: 8px;
     }
+    .cont-area .img-box .keyword:after {
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+    }
+
+    /*___________________step1___________________*/
 
 
 
