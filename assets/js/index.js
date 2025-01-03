@@ -12,7 +12,7 @@ var swiper = new Swiper('.swiper', {
     },
     on: {
         init: function() {
-            // 초기 세팅 (첫번째 슬라이드만 버튼 커스텀텀)
+            // 초기 세팅 (첫번째 슬라이드만 버튼 커스텀)
             $('.swiper-button-prev, .swiper-button-next').hide(); 
             $('.btn-area').show(); 
             keywordAni();
@@ -36,15 +36,6 @@ var swiper = new Swiper('.swiper', {
                 $('.swiper-button-wrap').prepend(skipTxt);
                 step2_animation.goToAndStop(0, true);
                 step2_animation.play();
-
-                $('.swiper-button-next').off('click').on('click', function(e) {
-                    e.preventDefault();
-                    $('.pop-wrap.step02').addClass('on')
-                })
-                $('.pop-wrap .step02-btn').click(function() {
-                    swiper.slideTo(2);
-                    $('.pop-wrap.step02').removeClass('on')
-                })
             
             } else {
                 $('.swiper-button-wrap button').remove();
@@ -56,14 +47,6 @@ var swiper = new Swiper('.swiper', {
                 $('.swiper-button-wrap .swiper-button-next').html('미션 시작');
                 step3_animation.goToAndStop(0, true);
                 step3_animation.play();
-
-                $('.swiper-button-next').off('click').on('click', function() {
-                    $('.pop-wrap.step03').addClass('on')
-                })
-                $('.pop-wrap .step03-btn').click(function() {
-                    swiper.slideTo(3);
-                    $('.pop-wrap.step03').removeClass('on')
-                })
             }
 
             // step4
@@ -122,33 +105,27 @@ const step3_animation = lottie.loadAnimation({
 
 //________________________ 키워드복사하기 애니메이션 ________________________//
 function keywordAni() {
-
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
     setTimeout(() => {
         $('.cont-area .img-box .keyword').addClass('animate');
-    },500)
-    // $('.cont-area .img-box .keyword').css({
-    //     '--y': moveHover,
-    //     '--shadow': shadowHover
-    // });
-    // $('.cont-area .img-box .keyword span').css({
-    //     '--m': `calc(${mValue}px)`
-    // });
 
-    setTimeout(()=> {
-        const txt = '키워드 복사하기';
+        setTimeout(() => {
+            const txt = '키워드 복사하기';
+            $('.cont-area .img-box .keyword').each(function() {
+                const keywordSpans = $(this).find('span');
 
-        $('.cont-area .img-box .keyword').each(function() {
-            const keywordSpans = $(this).find('span');
-            keywordSpans.each(function(index) {
-                if (index < txt.length) {
-                    $(this).text(txt.charAt(index)); 
-                }
+                keywordSpans.each(function(index) {
+                    if (index < txt.length) {
+                        $(this).text(txt.charAt(index)); 
+                    } else {
+                        $(this).text(''); 
+                    }
+                });
             });
-        });
-    }, 2000)
+        }, 200)
+    }, 500)
 }
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
