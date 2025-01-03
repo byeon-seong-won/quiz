@@ -122,17 +122,20 @@ const step3_animation = lottie.loadAnimation({
 
 //________________________ 키워드복사하기 애니메이션 ________________________//
 function keywordAni() {
+
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
-    $('.cont-area .img-box .keyword').css({
-        '--y': 'var(--move-hover)', 
-        '--shadow': 'var(--shadow-hover)' 
-    });
-    $('.cont-area .img-box .keyword span').css({
-        'border':'1px solid red',
-        '--m': 'calc(var(--font-size) * -1)'
-    });
+    setTimeout(() => {
+        $('.cont-area .img-box .keyword').addClass('animate');
+    },500)
+    // $('.cont-area .img-box .keyword').css({
+    //     '--y': moveHover,
+    //     '--shadow': shadowHover
+    // });
+    // $('.cont-area .img-box .keyword span').css({
+    //     '--m': `calc(${mValue}px)`
+    // });
 
     setTimeout(()=> {
         const txt = '키워드 복사하기';
@@ -140,13 +143,12 @@ function keywordAni() {
         $('.cont-area .img-box .keyword').each(function() {
             const keywordSpans = $(this).find('span');
             keywordSpans.each(function(index) {
-                // txt의 각 문자를 해당 span에 넣기
                 if (index < txt.length) {
-                    $(this).text(txt.charAt(index)); // 한 글자씩 삽입
+                    $(this).text(txt.charAt(index)); 
                 }
             });
         });
-    }, 1000)
+    }, 2000)
 }
 //________________________ 키워드복사하기 애니메이션 ________________________//
 

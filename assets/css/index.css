@@ -455,7 +455,7 @@
     overflow: hidden;
     text-shadow: 0 var(--font-shadow) 0 var(--text);
 }
-.cont-area .img-box .keyword span {
+.cont-area .img-box .keyword.animate span {
     display: block;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -496,6 +496,16 @@
 .cont-area .img-box .keyword span:nth-child(11) {
     transition-delay: 0.55s;
 }
+.cont-area .img-box .keyword.animate {
+    --y: var(--move-hover)
+    --shadow:var(--shadow-hover)
+}
+.cont-area .img-box .keyword.animate span {
+    --m: calc(var(--font-size) * -1)
+}
+
+
+
 /* 키워드 레퍼런스 애니메이션 */
 
 .cont-area .img-box .keyword:after {
