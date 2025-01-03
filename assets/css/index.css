@@ -296,7 +296,6 @@
     transform: translate(-50%,-50%);
     z-index: 1;
     width: 90%;
-    height: 233px;
     padding: 0 16px 16px;
     background: #fff;
     border-radius: 30px;
@@ -308,7 +307,9 @@
 .sub-pop-area > div {
     width: 100%;
 }
-
+.sub-pop-area .type1 {
+    height: 233px;
+}
 
 /* 로티 커스텀 */
 .sub-pop-area dotlottie-player {
@@ -379,6 +380,7 @@
 
 /* 문의하기 */
 .sub-pop-area .type2 {
+    padding-top: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -959,6 +961,8 @@
     .sub-pop-area {
         padding: 0 12px 12px;
         border-radius: 22px;
+    }
+    .sub-pop-area .type1 {
         height: 174px;
     }
 
@@ -1009,6 +1013,9 @@
         letter-spacing: -0.7px;
     }
     /* 문의하기 */
+    .sub-pop-area .type2 {
+        padding-top: 15px;
+    }
     .sub-pop-area .type2 h2 {
         margin-top: 3px;
         font-size: 15px;
