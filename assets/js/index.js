@@ -228,14 +228,14 @@ $('.btn-faq').click(function() {
 
 
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
-// function vibrateDevice() {
-//     if ("vibrate" in navigator) {
-//         alert('vibrationnnnn')
-//         navigator.vibrate([200]); 
-//     } else {
-//         alert("Vibration API를 지원하지 않습니다.");
-//     }
-// }
+function vibrateDevice() {
+    if ("vibrate" in navigator) {
+        alert('vibrationnnnn')
+        navigator.vibrate([200]); 
+    } else {
+        alert("Vibration API를 지원하지 않습니다.");
+    }
+}
 
 
 
@@ -246,12 +246,12 @@ $('.btn-faq').click(function() {
 
 
 
-// 
-const inputElement = document.getElementById('myInput');
+// 포커스 변경 방지
+// const inputElement = document.getElementById('myInput');
 
-document.addEventListener('touchstart', (event) => {
-  if (!inputElement.contains(event.target)) {
-    event.preventDefault(); // 포커스 변경 방지
-    inputElement.focus();
-  }
-});
+// document.addEventListener('touchstart', (event) => {
+//   if (!inputElement.contains(event.target)) {
+//     event.preventDefault(); 
+//     inputElement.focus();
+//   }
+// });
