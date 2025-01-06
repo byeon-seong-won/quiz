@@ -41,6 +41,10 @@
     border-radius: 4px;
     line-height: normal;
 }
+.header-area .btn-faq button:active {
+    background: #E0E0E4;
+    color: #485566;  /* 활성화 상태에서 텍스트 색상 유지 */
+}
 /* header */
 
 
@@ -325,6 +329,7 @@
     height: 233px;
 }
 
+
 /* 로티 커스텀 */
 .sub-pop-area dotlottie-player {
     position: absolute;
@@ -391,6 +396,7 @@
     letter-spacing: -0.9px;
     line-height: normal;
 }
+
 
 /* 문의하기 */
 .sub-pop-area .type2 {

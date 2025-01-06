@@ -243,3 +243,15 @@ $('.btn-faq').click(function() {
 
 
 
+
+
+
+// 
+const inputElement = document.getElementById('myInput');
+
+document.addEventListener('touchstart', (event) => {
+  if (!inputElement.contains(event.target)) {
+    event.preventDefault(); // 포커스 변경 방지
+    inputElement.focus();
+  }
+});
