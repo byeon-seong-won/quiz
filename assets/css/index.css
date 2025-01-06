@@ -40,10 +40,6 @@
     background: #F5F4F9;
     border-radius: 4px;
     line-height: normal;
-    -webkit-tap-highlight-color: #E0E0E4;
-}
-.header-area .btn-faq:active {
-    color: #485566;  /* 활성화 상태에서 텍스트 색상 유지 */
 }
 /* header */
 

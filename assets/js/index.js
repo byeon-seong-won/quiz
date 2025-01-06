@@ -207,23 +207,6 @@ $('.pop-area .step02-btn').click(function() {
 
 
 
-
-
-//________________________ 문의하기 팝업창 ________________________//
-$('.btn-faq').click(function() {
-    $('.sub-pop.faq').addClass('on');
-})
-//________________________ 문의하기 팝업창 ________________________//
-
-
-
-
-
-
-
-
-
-
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
 function vibrateDevice() {
     if ("vibrate" in navigator) {
