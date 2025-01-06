@@ -77,6 +77,7 @@ var swiper = new Swiper('.swiper', {
 
 
 
+
 //________________________ step별 애니메이션 ________________________//
 const step2_animation = lottie.loadAnimation({
   container: document.getElementById('step02'),
@@ -205,6 +206,27 @@ $('.pop-wrap .step01-btn').click(function() {
 
 
 
+
+//________________________ 문의하기 팝업창 ________________________//
+$('.btn-faq').click(function() {
+    $('.faq').addClass('on');
+})
+
+
+
+
+
+//________________________ 문의하기 팝업창 ________________________//
+
+
+
+
+
+
+
+
+
+
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
 // function vibrateDevice() {
 //     if ("vibrate" in navigator) {
@@ -214,6 +236,9 @@ $('.pop-wrap .step01-btn').click(function() {
 //         alert("Vibration API를 지원하지 않습니다.");
 //     }
 // }
+
+
+
 
 
 

@@ -15,6 +15,8 @@
 }
 
 
+
+
 /* header */
 .header-area {
     height: 60px;
@@ -29,7 +31,7 @@
     margin-left: -12px;
     background: url(../img/ico-back.png) no-repeat center / 100%;
 }
-.header-area button {
+.header-area .btn-faq {
     padding: 8px 12px;
     font-size: 12px;
     font-weight: 600;
@@ -40,6 +42,7 @@
     line-height: normal;
 }
 /* header */
+
 
 
 
@@ -58,6 +61,7 @@
     border-bottom-right-radius: 10px !important;
 }
 /* progress bar */
+
 
 
 
@@ -100,6 +104,7 @@
     align-self: center;
 }
 /* 컨텐츠 */
+
 
 
 
@@ -182,7 +187,10 @@
     padding: 16px;
     background: #fff;
     border-radius: 30px;
-    animation: slideUp 0.8s forwards;  
+    animation: slideUp 0.4s forwards;  
+}
+.pop-area > div {
+    padding-left: 6px;
 }
 .on {
     display: block;
@@ -472,7 +480,6 @@
     --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
     --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
     --font-shadow: var(--font-size);
-    /* --y: var(--move-hover); */
     line-height: var(--font-size);
     letter-spacing: 0.5px;
     border-radius: 11px;
@@ -543,9 +550,7 @@
 }
 
 
-
 /* 키워드 레퍼런스 애니메이션 */
-
 .cont-area .img-box .keyword:after {
     content: '';
     width: 13px;
@@ -553,7 +558,6 @@
     margin-left: 6px;
     background: url(../img/ico-copy.png) no-repeat center / 100%;
 }
-
 
 
 /* 하단 버튼 */
@@ -817,6 +821,9 @@
     .pop-wrap {
         padding: 10px;
         border-radius: 22px;
+    }
+    .pop-area > div {
+        padding-left: 4px;
     }
     .pop-wrap p {
         font-size: 13px;

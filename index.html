@@ -20,7 +20,7 @@
         <!--___공통 header___-->
         <div class="header-area">
             <a href="#"></a>
-            <button>문제가 발생했나요?</button>
+            <button class="btn-faq">문제가 발생했나요?</button>
         </div>     
         <!--___공통 header___-->
 
@@ -152,10 +152,12 @@
     <div class="pop-wrap step01">
         <div class="dimmedarea"></div>
         <div class="pop-area">
-            <span class="bar"></span>
-            <p>키워드가 복사되었어요</p>
-            <p>검색창에 붙여넣기 해주세요</p>
-            <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
+            <div>
+                <span class="bar"></span>
+                <p>키워드가 복사되었어요</p>
+                <p>검색창에 붙여넣기 해주세요</p>
+                <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
+            </div>
             <button class="step01-btn">이어하기</button>
         </div>  
     </div>
@@ -164,16 +166,18 @@
 
 
     <!-- step-02 팝업창 : 확인했어요 -->
-    <!-- <div class="pop-wrap step02">
+    <div class="pop-wrap step02">
         <div class="dimmedarea"></div>
         <div class="pop-area">
-            <p>가격비교 페이지로 랜딩할 경우,</p>
-            <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
-            <p>클릭해주세요</p>
+            <div>
+                <p>가격비교 페이지로 랜딩할 경우,</p>
+                <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
+                <p>클릭해주세요</p>
+            </div>
             <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
             <button class="step02-btn">네, 확인했어요</button>
         </div>
-    </div> -->
+    </div>
     <!-- step-02 팝업창 : 확인했어요 -->
 
 
@@ -268,8 +272,9 @@
         </div>
     </div>
 
+
     <!-- 문의하기 -->
-    <div class="sub-pop">
+    <div class="sub-pop faq" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
             <div class="type2">
