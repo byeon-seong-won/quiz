@@ -111,6 +111,7 @@ function keywordAni() {
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
+    
     setTimeout(() => {
         $('.cont-area .img-box .keyword').addClass('animate');
 
@@ -128,8 +129,12 @@ function keywordAni() {
                 });
             });
         }, 200)
+
+        // 1초 후에 다시 함수를 호출하여 두 번째 실행을 진행
+        setTimeout(keywordAni, 1000); // 1초 뒤에 함수를 다시 호출
     }, 500)
 }
+
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
 
@@ -143,23 +148,23 @@ function keywordAni() {
 
 
 // //________________________ 정답입력 키보드 대응(ios) ________________________//
-// let prevVisualViewport = 0;
-// const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent); // iOS 디바이스인지 체크
+let prevVisualViewport = 0;
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent); // iOS 디바이스인지 체크
 
-// const handleVisualViewportResize = () => {
-//   if (isIos && modal_opened) { //ios인 상태에서 모달이 오픈되면
-//     const currentVisualViewport = window.visualViewport.height; //visualViewPort의 height를 가져옵니다.
-//     if (currentVisualViewport < prevVisualViewport) {
-//       const scrollHeight = window.document.scrollingElement.scrollHeight;
-//       const scrollTop = scrollHeight - window.visualViewport.height;
-//       window.scrollTo({ top: scrollTop, behavior: 'smooth' }); // 입력창이 키보드에 가려지지 않도록 조절
-//     }
-//     prevVisualViewport = window.visualViewport.height;
-//   }
-//  };
-// if (isIOS) {
-//   window.visualViewport.onresize = handleVisualViewportResize; //visualViewPort가 변경될 때 마다 호출
-// }
+const handleVisualViewportResize = () => {
+  if (isIos && modal_opened) { //ios인 상태에서 모달이 오픈되면
+    const currentVisualViewport = window.visualViewport.height; //visualViewPort의 height를 가져옵니다.
+    if (currentVisualViewport < prevVisualViewport) {
+      const scrollHeight = window.document.scrollingElement.scrollHeight;
+      const scrollTop = scrollHeight - window.visualViewport.height;
+      window.scrollTo({ top: scrollTop, behavior: 'smooth' }); // 입력창이 키보드에 가려지지 않도록 조절
+    }
+    prevVisualViewport = window.visualViewport.height;
+  }
+ };
+if (isIOS) {
+  window.visualViewport.onresize = handleVisualViewportResize; //visualViewPort가 변경될 때 마다 호출
+}
 // //________________________ 정답입력 키보드 대응(ios) ________________________//
 
 
@@ -212,11 +217,6 @@ $('.pop-wrap .step01-btn').click(function() {
 $('.btn-faq').click(function() {
     $('.sub-pop.faq').addClass('on');
 })
-
-
-
-
-
 //________________________ 문의하기 팝업창 ________________________//
 
 
@@ -229,14 +229,14 @@ $('.btn-faq').click(function() {
 
 
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
-// function vibrateDevice() {
-//     if ("vibrate" in navigator) {
-//         alert('vibrationnnnn')
-//         navigator.vibrate([100, 50, 100, 50, 100]);
-//     } else {
-//         alert("Vibration API를 지원하지 않습니다.");
-//     }
-// }
+function vibrateDevice() {
+    if ("vibrate" in navigator) {
+        alert('vibrationnnnn')
+        navigator.vibrate([100, 50, 100, 50, 100]);
+    } else {
+        alert("Vibration API를 지원하지 않습니다.");
+    }
+}
 
 
 

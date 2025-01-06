@@ -301,12 +301,6 @@
 
 
 /* sub 팝업창 */
-.sub-pop {
-    display: none;
-}
-.sub-pop.on {
-    display: block;
-}
 .sub-pop-area {
     position: absolute;
     top: 50%;

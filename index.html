@@ -208,16 +208,16 @@
 
 
     <!--_____sub 팝업창_____-->
-    <div class="sub-pop"> 
+    <div class="sub-pop" style="display: none;"> 
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
             <div class="type1">
                 <!-- (1) 정답입니다 -->
-                <!-- <div class="pop01">
-                    <dotlottie-player src="https://lottie.host/2da5ab72-cd2a-4c09-b701-8bf9c13b0e4f/V9ZvWFnQaO.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                <div class="pop01">
+                    <div id="pop01"></div>
                     <p>정답입니다!</p>
                     <p>리워드가 적립됐어요</p>
-                </div> -->
+                </div>
                 <!-- (1) 정답입니다 -->
     
                 <!-- (2) 아쉬워요 -->
@@ -253,11 +253,11 @@
                 <!-- (5) 등록오류 -->
     
                 <!-- (6) 참여실패 -->
-                <div class="pop06">
+                <!-- <div class="pop06">
                     <dotlottie-player src="https://lottie.host/9541eb4e-070e-4fc7-891f-ae5de7444084/crdwWc6x0E.lottie" speed="1" loop autoplay></dotlottie-player>
                     <p class="mark">참여실패</p>
                     <p>이미지를 다시 캡쳐해서 올려주세요</p>
-                </div>
+                </div> -->
                 <!-- (6) 참여실패 -->
     
                 <!-- (7) 등록완료 -->
@@ -275,7 +275,7 @@
 
 
     <!-- 문의하기 -->
-    <div class="sub-pop faq">
+    <div class="sub-pop faq" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
             <div class="type2">
