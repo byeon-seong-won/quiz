@@ -47,6 +47,7 @@ var swiper = new Swiper('.swiper', {
                 $('.swiper-button-wrap .swiper-button-next').html('미션 시작');
                 step3_animation.goToAndStop(0, true);
                 step3_animation.play();
+
             }
 
             // step4
@@ -143,7 +144,7 @@ function keywordAni() {
 
 
 
-// //________________________ 정답입력 키보드 대응(ios) ________________________//
+// //________________________ 정답입력 키보드 대응(ios) 참고 ________________________//
 let prevVisualViewport = 0;
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent); // iOS 디바이스인지 체크
 
@@ -176,27 +177,29 @@ if (isIOS) {
 //________________________step별 팝업창________________________//
 // step1 키워드복사클릭시 팝업창
 $('.btn-area button').click(function() {
-    $('.pop-wrap.step01').addClass('on')
+    $('.slide-pop.step01').addClass('on')
 })
 
-$('.pop-wrap .step01-btn').click(function() {
+$('.slide-pop .step01-btn').click(function() {
     swiper.slideTo(1);
-    $('.pop-wrap.step01').removeClass('on')
+    $('.slide-pop.step01').removeClass('on')
 })
-
-
 // step2 상품비교 확인 팝업창
-$('.swiper-button-next').click(function() {
-    $('.pop-wrap.step02').addClass('on')
+$('.swiper-button-next').click(function() { 
+    $('.slide-pop.step02').addClass('on')
 })
 $('.pop-area .step02-btn').click(function() {
     swiper.slideTo(2);
-    $('.pop-wrap.step02').removeClass('on')
+    $('.slide-pop.step02').removeClass('on')
 })
 
-// $('.swiper-button-next').click(function() {
-//     $('.pop-wrap.step03').addClass('on')
-// })
+// step3 검색하러가기 팝업창
+$('.swiper-button-next').click(function() {
+    $('.slide-pop.step03').addClass('on')
+})
+$('.pop-area .step03-btn').click(function() {
+    $('.slide-pop.step03').removeClass('on')
+})
 //________________________step별 팝업창________________________//
 
 
@@ -205,17 +208,16 @@ $('.pop-area .step02-btn').click(function() {
 
 
 
-
-
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
-function vibrateDevice() {
-    if ("vibrate" in navigator) {
-        alert('vibration')
-        navigator.vibrate([100, 50, 100, 50, 100]);
-    } else {
-        alert("Vibration API를 지원하지 않습니다.");
-    }
-}
+// function vibrateDevice() {
+//     if ("vibrate" in navigator) {
+//         alert('vibration')
+//         navigator.vibrate([100, 50, 100, 50, 100]);
+//     } else {
+//         alert("Vibration API를 지원하지 않습니다.");
+//     }
+// }
+// --------------------- vibration api : 오답인경우 실행 --------------------- //
 
 
 
@@ -226,12 +228,6 @@ function vibrateDevice() {
 
 
 
-// 포커스 변경 방지
-// const inputElement = document.getElementById('myInput');
 
-// document.addEventListener('touchstart', (event) => {
-//   if (!inputElement.contains(event.target)) {
-//     event.preventDefault(); 
-//     inputElement.focus();
-//   }
-// });
+
+

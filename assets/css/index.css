@@ -165,9 +165,12 @@
 
 
 
+
+
+
 /* step별 팝업창 */
 .dimmedarea {
-    background: rgba(0, 0, 0,0.5);
+    background: #666;
     position: fixed;
     top: 0;
     left: 0;
@@ -175,9 +178,7 @@
     width: 100%;
     z-index: 1;
 }
-.pop-wrap {
-    display: none;
-}
+
 .pop-area {
     position: absolute;
     left: 50%;
@@ -192,6 +193,9 @@
 .pop-area > div {
     padding-left: 6px;
 }
+.slide-pop {
+    display: none;
+}
 .on {
     display: block;
 }
@@ -205,7 +209,8 @@
         opacity: 1;
     }
 }
-.pop-wrap .bar {
+
+.slide-pop .bar {
     display: block;
     width: 40px;
     height: 4px;
@@ -213,22 +218,22 @@
     background: #E6E6E6;
     border-radius: 10px;
 }
-.pop-wrap p {
+.slide-pop p {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.4px;
 }
-.pop-wrap .desc {
+.slide-pop .desc {
     margin: 14px 0 44px;
     font-size: 14px;
     color: #555555;
     font-weight: 500;
     letter-spacing: -0.3px;
 }
-.pop-wrap .mark {
+.slide-pop .mark {
     color: #496DDB;
 }
-.pop-wrap button {
+.slide-pop button {
     width: 100%;
     height: 55px;
     font-size: 18px;
@@ -238,11 +243,11 @@
     letter-spacing: -0.9px;
     line-height: normal;
 }
-.pop-wrap.step02 img {
+.slide-pop.step02 img {
     width: 192px;
     margin: 29px auto 13px;
 } 
-.pop-wrap.step03 .adtxt {
+.slide-pop.step03 .adtxt {
     margin-top: 7px;
     font-size: 12px;
     font-weight: 500;
@@ -254,14 +259,14 @@
     justify-content: center;
     background: transparent;
 }
-.pop-wrap.step03 .img-box {
+.slide-pop.step03 .img-box {
     width: 120px;
     margin: 30px auto 16px;
     padding: 7px;
     border: 1px solid #F2EBEB;
     border-radius: 10px;
 }
-.pop-wrap.step03 .info-box {
+.slide-pop.step03 .info-box {
     margin: 16px 0 26px;
     padding: 0 16px;
     display: flex;
@@ -269,7 +274,7 @@
     justify-content: center;
     align-items: center;
 }
-.pop-wrap.step03 .info-box p:nth-child(1) {
+.slide-pop.step03 .info-box p:nth-child(1) {
     font-size: 14px;
     font-weight: 500;
     text-align: center;
@@ -280,7 +285,7 @@
     gap: 4px;
     line-height: normal;
 }
-.pop-wrap.step03 .info-box p:nth-child(1) span {
+.slide-pop.step03 .info-box p:nth-child(1) span {
     padding: 3px;
     font-size: 8px;
     color: #496DDB;
@@ -288,12 +293,15 @@
     border: 1px solid #496DDB;
     flex-shrink: 0;
 }
-.pop-wrap.step03 .info-box p:nth-child(2) {
+.slide-pop.step03 .info-box p:nth-child(2) {
     margin-top: 5px;
     font-size: 22px;
     font-weight: 600;
 }
 /* step별 팝업창 */
+
+
+
 
 
 /* sub 팝업창 */
@@ -823,64 +831,64 @@
     }
 
     /* 팝업창 */
-    .pop-wrap {
+    .slide-pop {
         padding: 10px;
         border-radius: 22px;
     }
     .pop-area > div {
         padding-left: 4px;
     }
-    .pop-wrap p {
+    .slide-pop p {
         font-size: 13px;
         letter-spacing: -0.3px;
     }
-    .pop-wrap .desc {
+    .slide-pop .desc {
         margin: 10px 0 33px;
         font-size: 10px;
         letter-spacing: -0.2px;
     }
-    .pop-wrap button {
+    .slide-pop button {
         height: 41px;
         border-radius: 10px;
         font-size: 14px;
         letter-spacing: -0.7px;
     }
-    .pop-wrap .bar {
+    .slide-pop .bar {
         width: 30px;
         height: 3px;
         margin: 0 auto 6px;
         border-radius: 7px;
     }
-    .pop-wrap.step02 img {
+    .slide-pop.step02 img {
         width: 143px;
         margin: 22px auto 10px;
     }
-    .pop-wrap.step03 .img-box {
+    .slide-pop.step03 .img-box {
         width:90px;
         margin: 22px auto 12px;
         padding: 5px;
         border-radius: 7px;
     }
-    .pop-wrap.step03 .info-box {
+    .slide-pop.step03 .info-box {
         margin: 12px 0 19px;
         padding: 0 12px;
     }
-    .pop-wrap.step03 .info-box p:nth-child(1) {
+    .slide-pop.step03 .info-box p:nth-child(1) {
         font-size: 10px;
         letter-spacing: -0.2px;
         gap: 3px;
     }
-    .pop-wrap.step03 .info-box p:nth-child(1) span {
+    .slide-pop.step03 .info-box p:nth-child(1) span {
         padding: 2px;
         font-size: 10px;
         letter-spacing: -0.2px;
     }
-    .pop-wrap.step03 .info-box p:nth-child(2) {
+    .slide-pop.step03 .info-box p:nth-child(2) {
         margin-top: 4px;
         font-size: 16px;
         letter-spacing: -0.3px;
     }
-    .pop-wrap.step03 .adtxt {
+    .slide-pop.step03 .adtxt {
         margin-top: 5px;
         font-size: 10px;
         letter-spacing: -0.2px;

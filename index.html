@@ -2,14 +2,16 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no;" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    <!-- lottie -->
     <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.9.4/build/player/lottie.min.js"></script>
+    <!-- lottie -->
+
+
     <script src="./assets/js/index.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -67,7 +69,7 @@
                     <div class="cont-area">
                         <div class="text-box">
                             <p>상세정보를 펼쳐<br>
-                                <span>관련 해시태그</span>를 찾아주세요</p>
+                            <span>관련 해시태그</span>를 찾아주세요</p>
                         </div>
                         <div class="img-box animation" id="step03"></div>
                     </div>
@@ -147,10 +149,14 @@
         </div>
     </div>
 
-    
+
+
+
+
+
 
     <!-- step-01 팝업창 : 키워드 복사 -->
-    <div class="pop-wrap step01">
+    <div class="slide-pop step01" data-tab="pop-step01">
         <div class="dimmedarea"></div>
         <div class="pop-area">
             <div>
@@ -167,7 +173,7 @@
 
 
     <!-- step-02 팝업창 : 확인했어요 -->
-    <div class="pop-wrap step02">
+    <div class="slide-pop step02" data-tab="pop-step02" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="pop-area">
             <div>
@@ -184,7 +190,7 @@
 
 
     <!-- step-03 팝업창 : 검색하러가기 -->
-    <div class="pop-wrap step03" style="display: none;">
+    <div class="slide-pop step03" data-tab="pop-step03" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="pop-area">
             <p>복사한 키워드를 검색창에 붙여넣고,</p>
@@ -205,10 +211,10 @@
 
 
 
-
-
-    <!--_____sub 팝업창_____-->
-    <div class="sub-pop" style="display: none;"> 
+    
+    <!--__-________sub 팝업창__-________-->
+    <!-- (1) 정답입니다 -->
+    <div class="sub-pop" data-tab="correct" style="display: none;"> 
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
             <div class="type1">
@@ -218,64 +224,91 @@
                     <p>정답입니다!</p>
                     <p>리워드가 적립됐어요</p>
                 </div>
-                <!-- (1) 정답입니다 -->
-    
-                <!-- (2) 아쉬워요 -->
-                <!-- <div class="pop02">
-                    <dotlottie-player src="https://lottie.host/b63e69a3-2088-4b2f-8132-1c2d6711326e/CxOOVpafNN.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
-                    <p>아쉬워요!</p>
-                    <p>종료된 이벤트에요</p>
-                </div> -->
-                <!-- (2) 아쉬워요 -->
-    
-                <!-- (3) 참여완료 -->
-                <!-- <div class="pop03">
-                    <dotlottie-player src="https://lottie.host/4c4e2eb0-dd29-47f4-b2c9-6976ada3a753/1HxXSNLEXz.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
-                    <p>참여완료!</p>
-                    <p>이미 참여한 미션이에요</p>
-                </div> -->
-                <!-- (3) 참여완료 -->
-    
-                <!-- (4) 오늘의 퀴즈는 여기까지 -->
-                <!-- <div class="pop04">
-                    <dotlottie-player src="https://lottie.host/8e2b70d1-9b23-47dd-8622-1dd242cb0904/KKeUdHKYWX.lottie" speed="1" loop autoplay></dotlottie-player>
-                    <p>오늘의 퀴즈는 여기까지!</p>
-                    <p>내일 다시 참여 가능해요.</p>
-                </div> -->
-                <!-- (4) 오늘의 퀴즈는 여기까지 -->
-    
-                <!-- (5) 등록오류 -->
-                <!-- <div class="pop05">
-                    <dotlottie-player src="https://lottie.host/9541eb4e-070e-4fc7-891f-ae5de7444084/crdwWc6x0E.lottie" speed="1" loop autoplay></dotlottie-player>
-                    <p class="mark">등록오류</p>
-                    <p>이미지가 정상적으로 등록되지 않았어요</p>
-                </div> -->
-                <!-- (5) 등록오류 -->
-    
-                <!-- (6) 참여실패 -->
-                <!-- <div class="pop06">
-                    <dotlottie-player src="https://lottie.host/9541eb4e-070e-4fc7-891f-ae5de7444084/crdwWc6x0E.lottie" speed="1" loop autoplay></dotlottie-player>
-                    <p class="mark">참여실패</p>
-                    <p>이미지를 다시 캡쳐해서 올려주세요</p>
-                </div> -->
-                <!-- (6) 참여실패 -->
-    
-                <!-- (7) 등록완료 -->
-                <!-- <div class="pop07">
-                    <dotlottie-player src="https://lottie.host/611e75bc-ebe1-49de-b8d3-9931d7ae359d/ifImx2ua1Y.lottie" speed="1" loop autoplay></dotlottie-player>
-                    <p>등록완료!</p>
-                    <p>문의가 정상적으로 등록됐어요</p>
-                </div> -->
-                <!-- (7) 등록완료 -->
-    
                 <button>확인</button>
             </div>
         </div>
     </div>
+    <!-- (1) 정답입니다 -->
 
+    <!-- (2) 아쉬워요 -->
+    <div class="sub-pop" data-tab="wrong" style="display: none;">
+        <div class="dimmedarea"></div>
+        <div class="sub-pop-area">
+            <div class="pop02">
+                <dotlottie-player src="https://lottie.host/b63e69a3-2088-4b2f-8132-1c2d6711326e/CxOOVpafNN.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                <p>아쉬워요!</p>
+                <p>종료된 이벤트에요</p>
+            </div>
+        </div>
+    </div>
+    <!-- (2) 아쉬워요 -->
 
-    <!-- 문의하기 -->
-    <div class="sub-pop faq" style="display: none;">
+    <!-- (3) 참여완료 -->
+    <div class="sub-pop" data-tab="complete" style="display: none;">
+        <div class="dimmedarea"></div>
+        <div class="sub-pop-area">
+            <div class="pop03">
+                <dotlottie-player src="https://lottie.host/4c4e2eb0-dd29-47f4-b2c9-6976ada3a753/1HxXSNLEXz.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                <p>참여완료!</p>
+                <p>이미 참여한 미션이에요</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- (4) 오늘의 퀴즈는 여기까지 -->
+    <div class="sub-pop" data-tab="today" style="display: none;">
+        <div class="dimmedarea"></div>
+        <div class="sub-pop-area">
+            <div class="pop04">
+                <dotlottie-player src="https://lottie.host/9541eb4e-070e-4fc7-891f-ae5de7444084/crdwWc6x0E.lottie" speed="1" loop autoplay></dotlottie-player>
+                <p>오늘의 퀴즈는 여기까지!</p>
+                <p>내일 다시 참여 가능해요.</p>
+            </div>
+        </div>
+    </div>
+    <!-- (4) 오늘의 퀴즈는 여기까지 -->
+    
+    <!-- (5) 등록오류 -->
+    <div class="sub-pop" data-tab="error" style="display: none;">
+        <div class="dimmedarea"></div>
+        <div class="sub-pop-area">
+            <div class="pop05">
+                <p class="mark">등록오류</p>
+                <p>이미지가 정상적으로 등록되지 않았어요</p>
+            </div>
+        </div>
+    </div>
+    <!-- (5) 등록오류 -->
+
+    <!-- (6) 참여실패 -->
+    <div class="sub-pop" data-tab="fail" style="display: none;">
+        <div class="dimmedarea"></div>
+        <div class="sub-pop-area">
+            <div class="pop06">
+                <dotlottie-player src="https://lottie.host/9541eb4e-070e-4fc7-891f-ae5de7444084/crdwWc6x0E.lottie" speed="1" loop autoplay></dotlottie-player>
+                <p class="mark">참여실패</p>
+                <p>이미지를 다시 캡쳐해서 올려주세요</p>
+            </div>
+        </div>
+    </div>
+    <!-- (6) 참여실패 -->
+    
+    <!-- (7) 등록완료 -->
+    <div class="sub-pop" data-tab="finish" style="display: none;">
+        <div class="dimmedarea"></div>
+        <div class="sub-pop-area">
+            <div class="pop07">
+                <dotlottie-player src="https://lottie.host/611e75bc-ebe1-49de-b8d3-9931d7ae359d/ifImx2ua1Y.lottie" speed="1" loop autoplay></dotlottie-player>
+                <p>등록완료!</p>
+                <p>문의가 정상적으로 등록됐어요</p>
+            </div>
+        </div>
+    </div>
+    <!-- (7) 등록완료 -->
+    
+
+    <!-- (8) 문의하기 -->
+    <div class="sub-pop" data-tab="faq" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
             <div class="type2">
@@ -292,9 +325,8 @@
             </div>
         </div>
     </div>
-    <!-- 문의하기 -->
-
-    <!--_____sub 팝업창_____-->
+    <!-- (8) 문의하기 -->
+    <!--__-________sub 팝업창__-________-->
 
 </body>
 </html>
