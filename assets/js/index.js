@@ -209,7 +209,7 @@ $('.pop-wrap .step01-btn').click(function() {
 
 //________________________ 문의하기 팝업창 ________________________//
 $('.btn-faq').click(function() {
-    $('.faq').addClass('on');
+    $('.sub-pop.faq').addClass('on');
 })
 
 
