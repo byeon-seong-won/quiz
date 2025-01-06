@@ -231,7 +231,7 @@ $('.btn-faq').click(function() {
 function vibrateDevice() {
     if ("vibrate" in navigator) {
         alert('vibrationnnnn')
-        navigator.vibrate([200]); 
+        navigator.vibrate([100, 50, 100, 50, 100]);
     } else {
         alert("Vibration API를 지원하지 않습니다.");
     }
