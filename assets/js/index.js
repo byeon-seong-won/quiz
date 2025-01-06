@@ -129,12 +129,8 @@ function keywordAni() {
                 });
             });
         }, 200)
-
-        // 1초 후에 다시 함수를 호출하여 두 번째 실행을 진행
-        setTimeout(keywordAni, 1000); // 1초 뒤에 함수를 다시 호출
     }, 500)
 }
-
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
 
@@ -190,13 +186,13 @@ $('.pop-wrap .step01-btn').click(function() {
 
 
 // step2 상품비교 확인 팝업창
-// $('.swiper-button-next').click(function() {
-//     $('.pop-wrap.step02').addClass('on')
-// })
-// $('.pop-area .step02-btn').click(function() {
-//     swiper.slideTo(2);
-//     $('.pop-wrap.step02').removeClass('on')
-// })
+$('.swiper-button-next').click(function() {
+    $('.pop-wrap.step02').addClass('on')
+})
+$('.pop-area .step02-btn').click(function() {
+    swiper.slideTo(2);
+    $('.pop-wrap.step02').removeClass('on')
+})
 
 // $('.swiper-button-next').click(function() {
 //     $('.pop-wrap.step03').addClass('on')
