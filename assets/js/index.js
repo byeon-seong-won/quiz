@@ -74,7 +74,7 @@ var swiper = new Swiper('.swiper', {
 
             // ---- step1 팝업창 ---- 
             $('.btn-area button').click(function() {
-                $('.swiper').append(pop_step01);
+                $('.wrap').append(pop_step01);
                 $('.slide-pop.step01 button').click(function() {
                     swiper.slideTo(1);
                     $('.slide-pop.step01').remove();
@@ -93,7 +93,7 @@ var swiper = new Swiper('.swiper', {
 
                 // ---- step2 팝업창 ---- 
                 $('.step02 .swiper-button-next').click(function() {
-                    $('.swiper').append(pop_step02);
+                    $('.wrap').append(pop_step02);
                     $('.slide-pop.step02 button').click(function() {
                         swiper.slideTo(2);
                         $('.slide-pop.step02').remove();
@@ -109,7 +109,7 @@ var swiper = new Swiper('.swiper', {
 
                 // ---- step3 팝업창 ---- 
                 $('.step03 .swiper-button-next').click(function() {
-                    $('.swiper').append(pop_step03);
+                    $('.wrap').append(pop_step03);
                     $('.slide-pop.step03 button').click(function() {
                         // ~~~~~ 검색하러가기 사이트 이동 ~~~~~ 
                         $('.slide-pop.step03').remove();
