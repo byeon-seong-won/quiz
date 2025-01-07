@@ -114,8 +114,7 @@
 /* 하단 고정 버튼 */
 .swiper-button-wrap {
     position: absolute;
-    /* bottom: 34px; */
-    bottom: 9.06vw;
+    bottom: 34px;
     z-index: 2;
     width: 100%;
     display: flex;
