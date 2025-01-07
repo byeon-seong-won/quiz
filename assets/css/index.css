@@ -675,6 +675,9 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.input-block-wrap.wrong {
+    margin-top: 20px;
+}
 
 
 
