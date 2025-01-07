@@ -114,7 +114,8 @@
 /* 하단 고정 버튼 */
 .swiper-button-wrap {
     position: absolute;
-    bottom: 34px;
+    /* bottom: 34px; */
+    bottom: 9.06vw;
     z-index: 2;
     width: 100%;
     display: flex;
@@ -183,25 +184,25 @@
 }
 .pop-area {
     position: absolute;
-    left: 50%;
+    left: 50%;  
     transform: translateX(-50%);
     z-index: 5;
     width: 100%;
     padding: 28px 16px 16px 16px;
     background: #fff;
     border-radius: 30px;
-    animation: slideUp 0.4s forwards;  
+    animation: slideUp 0.4s forwards;
 }
 .pop-area .txt-box {
     padding-left: 6px;
 }
 @keyframes slideUp {
     0% {
-        bottom: -200px;  
+        bottom: -200px;
         opacity: 0;
     }
     100% {
-        bottom: 34px;  
+        bottom: 34px;
         opacity: 1;
     }
 }
@@ -306,6 +307,10 @@
 
 
 /* sub 팝업창 */
+.sub-pop .dimmedarea {
+    background: rgba(102, 102, 102,0.6);
+    z-index: 1;
+}
 .sub-pop-area {
     position: absolute;
     top: 50%;
@@ -362,7 +367,6 @@
     top: 15px !important;
 }
 .sub-pop-area #pop05 svg {
-    top: 15px !important;
     height: 65px !important;
 }
 .sub-pop-area #pop06 {
@@ -1028,7 +1032,7 @@
         top: 11px !important;
     }
     .sub-pop-area #pop05 svg {
-        height: 65px !important;
+        height: 48px !important;
     }
     .sub-pop-area #pop06 {
         top: 11px !important;
@@ -1037,10 +1041,10 @@
         height: 49px !important;
     }
     .sub-pop-area #pop07 {
-        top: 25px !important;
+        top: 19px !important;
     }
     .sub-pop-area #pop07 svg {
-        height: 44px !important;
+        height: 33px !important;
     }
     /* 로티 애니메이션 */
 

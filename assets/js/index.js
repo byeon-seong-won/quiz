@@ -1,5 +1,5 @@
 // step01 팝업창
-const step01_pop = `
+const pop_step01 = `
 <div class="slide-pop step01">
     <div class="dimmedarea"></div>
     <div class="pop-area">
@@ -14,7 +14,7 @@ const step01_pop = `
 </div>
 `;
 // step02 팝업창
-const step02_pop = `
+const pop_step02 = `
 <div class="slide-pop step02">
     <div class="dimmedarea"></div>
     <div class="pop-area">
@@ -23,13 +23,13 @@ const step02_pop = `
             <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
             <p>클릭해주세요</p>
         </div>
-        <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
-        <button class="step02-btn">네, 확인했어요</button>
+        <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
+        <button>네, 확인했어요</button>
     </div>
 </div>
 `;
 // step03 팝업창
-const step03_pop = `
+const pop_step03 = `
 <div class="slide-pop step03">
     <div class="dimmedarea"></div>
     <div class="pop-area">
@@ -54,7 +54,7 @@ const step03_pop = `
 
 
 
-
+// 전체 swiper
 var swiper = new Swiper('.swiper', {
     simulateTouch: false, 
     touchRatio: 0, 
@@ -74,7 +74,7 @@ var swiper = new Swiper('.swiper', {
 
             // ---- step1 팝업창 ---- 
             $('.btn-area button').click(function() {
-                $('.swiper').append(step01_pop);
+                $('.swiper').append(pop_step01);
                 $('.slide-pop.step01 button').click(function() {
                     swiper.slideTo(1);
                     $('.slide-pop.step01').remove();
@@ -93,7 +93,7 @@ var swiper = new Swiper('.swiper', {
 
                 // ---- step2 팝업창 ---- 
                 $('.step02 .swiper-button-next').click(function() {
-                    $('.swiper').append(step02_pop);
+                    $('.swiper').append(pop_step02);
                     $('.slide-pop.step02 button').click(function() {
                         swiper.slideTo(2);
                         $('.slide-pop.step02').remove();
@@ -109,7 +109,7 @@ var swiper = new Swiper('.swiper', {
 
                 // ---- step3 팝업창 ---- 
                 $('.step03 .swiper-button-next').click(function() {
-                    $('.swiper').append(step03_pop);
+                    $('.swiper').append(pop_step03);
                     $('.slide-pop.step03 button').click(function() {
                         // ~~~~~ 검색하러가기 사이트 이동 ~~~~~ 
                         $('.slide-pop.step03').remove();
@@ -144,7 +144,7 @@ var swiper = new Swiper('.swiper', {
 
 //________________________ step별 애니메이션 ________________________//
 const step2_animation = lottie.loadAnimation({
-  container: document.getElementById('step02'),
+  container: document.getElementById('lottie-step02'),
   path: 'assets/json/hash_step2.json',
   renderer: 'svg',
   loop: false,
@@ -153,7 +153,7 @@ const step2_animation = lottie.loadAnimation({
 
 
 const step3_animation = lottie.loadAnimation({
-  container: document.getElementById('step03'),
+  container: document.getElementById('lottie-step03'),
   path: 'assets/json/hash_step3.json',
   renderer: 'svg',
   loop: false,
