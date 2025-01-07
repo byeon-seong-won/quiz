@@ -676,7 +676,8 @@
     transform: translateY(-50%);
 }
 .input-block-wrap.wrong {
-    margin-top: 20px;
+    margin-top: 15px;
+    border: 1px solid #000;
 }
 
 
