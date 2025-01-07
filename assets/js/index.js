@@ -1,3 +1,60 @@
+// step01 팝업창
+const step01_pop = `
+<div class="slide-pop step01">
+    <div class="dimmedarea"></div>
+    <div class="pop-area">
+        <div class="txt-box">
+            <span class="bar"></span>
+            <p>키워드가 복사되었어요</p>
+            <p>검색창에 붙여넣기 해주세요</p>
+            <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
+        </div>
+        <button>이어하기</button>
+    </div>  
+</div>
+`;
+// step02 팝업창
+const step02_pop = `
+<div class="slide-pop step02">
+    <div class="dimmedarea"></div>
+    <div class="pop-area">
+        <div class="txt-box">
+            <p>가격비교 페이지로 랜딩할 경우,</p>
+            <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
+            <p>클릭해주세요</p>
+        </div>
+        <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
+        <button class="step02-btn">네, 확인했어요</button>
+    </div>
+</div>
+`;
+// step03 팝업창
+const step03_pop = `
+<div class="slide-pop step03">
+    <div class="dimmedarea"></div>
+    <div class="pop-area">
+        <div class="txt-box">
+            <p>복사한 키워드를 검색창에 붙여넣고,</p>
+            <p><span class="mark">아래 상품을 찾아주세요</span></p>
+        </div>
+        <div class="img-box">
+            <img src="./assets/img/prd.png" alt="복사한 키워드를 검색창에 붙여넣고,아래 상품을 찾아주세요">
+        </div>
+        <div class="info-box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quisquam?<span>공식</span></p>
+            <p>17,800원</p>
+        </div>
+        <button>검색하러가기</button>
+        <span class="adtxt">&apos;광고&#9432;&apos; 상품은 클릭하지 마세요!</span>
+    </div>
+</div>
+`;
+
+
+
+
+
+
 var swiper = new Swiper('.swiper', {
     simulateTouch: false, 
     touchRatio: 0, 
@@ -13,60 +70,67 @@ var swiper = new Swiper('.swiper', {
     on: {
         // 초기 세팅
         init: function() {
-            $('.swiper-button-prev, .swiper-button-next').hide(); 
-            $('.btn-area').show(); 
             keywordAni();
+
+            // ---- step1 팝업창 ---- 
+            $('.btn-area button').click(function() {
+                $('.swiper').append(step01_pop);
+                $('.slide-pop.step01 button').click(function() {
+                    swiper.slideTo(1);
+                    $('.slide-pop.step01').remove();
+                })
+            })
+            // ---- step1 팝업창 ---- 
         },
         // 슬라이드 전환시
         slideChange: function() {
             const idx = this.realIndex;
-            
-            // step1
-            if (idx === 0) { 
-                $('.swiper-button-prev, .swiper-button-next').hide(); 
-                $('.btn-area').show(); 
-            } else {
-                $('.swiper-button-prev, .swiper-button-next').show(); 
-                $('.btn-area').hide(); 
-            }
 
             // step2
             if (idx === 1) { 
-                const skipTxt = '<button>가이드 건너뛰기</button>';
-                $('.swiper-button-wrap').prepend(skipTxt);
                 step2_animation.goToAndStop(0, true);
                 step2_animation.play();
-            
-            } else {
-                $('.swiper-button-wrap button').remove();
-            }
+
+                // ---- step2 팝업창 ---- 
+                $('.step02 .swiper-button-next').click(function() {
+                    $('.swiper').append(step02_pop);
+                    $('.slide-pop.step02 button').click(function() {
+                        swiper.slideTo(2);
+                        $('.slide-pop.step02').remove();
+                    })
+                })
+                // ---- step2 팝업창 ---- 
+            } 
 
             // step3
             if (idx === 2) { 
-                $('.swiper-button-wrap .swiper-button-prev').html('이전');
-                $('.swiper-button-wrap .swiper-button-next').html('미션 시작');
                 step3_animation.goToAndStop(0, true);
                 step3_animation.play();
 
+                // ---- step3 팝업창 ---- 
+                $('.step03 .swiper-button-next').click(function() {
+                    $('.swiper').append(step03_pop);
+                    $('.slide-pop.step03 button').click(function() {
+                        // ~~~~~ 검색하러가기 사이트 이동 ~~~~~ 
+                        $('.slide-pop.step03').remove();
+                    })
+                })
+                // ---- step3 팝업창 ---- 
             }
 
             // step4
             if (idx === 3) { 
+
+                // ---- 하단 배너이미지 ---- 
                 const imgTag = '<a href="#" class="banner"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.swiper').append(imgTag);
-                $('.swiper-button-wrap .swiper-button-prev').html('다시 확인하기');
-                $('.swiper-button-wrap .swiper-button-next').html('정답 입력');
                 $('.swiper-button-wrap').css('transform', 'translateY(-48px)');
                 $('.input-block-wrap input:nth-of-type(1)').focus();
             } else {
                 $('.swiper .banner').remove();
                 $('.swiper-button-wrap').css('transform', 'translateY(0)');
             }
-
-            if(!(idx === 2 || idx === 3)) {
-                $('.swiper-button-wrap .swiper-button-prev').html('이전');
-                $('.swiper-button-wrap .swiper-button-next').html('다음');
-            }
+            // ---- 하단 배너이미지 ---- 
         }
     }
 });
@@ -170,38 +234,57 @@ if (isIOS) {
 
 
 
-
-
-
-
-//________________________step별 팝업창________________________//
-// step1 키워드복사클릭시 팝업창
-$('.btn-area button').click(function() {
-    $('.slide-pop.step01').addClass('on')
-})
-
-$('.slide-pop .step01-btn').click(function() {
-    swiper.slideTo(1);
-    $('.slide-pop.step01').removeClass('on')
-})
-// step2 상품비교 확인 팝업창
-$('.swiper-button-next').click(function() { 
-    $('.slide-pop.step02').addClass('on')
-})
-$('.pop-area .step02-btn').click(function() {
-    swiper.slideTo(2);
-    $('.slide-pop.step02').removeClass('on')
-})
-
-// step3 검색하러가기 팝업창
-$('.swiper-button-next').click(function() {
-    $('.slide-pop.step03').addClass('on')
-})
-$('.pop-area .step03-btn').click(function() {
-    $('.slide-pop.step03').removeClass('on')
-})
-//________________________step별 팝업창________________________//
-
+//________________________ sub-pop 팝업창 로티 애니메이션 ________________________//
+const pop01_animation = lottie.loadAnimation({
+    container: document.getElementById('pop01'), 
+    path: 'assets/json/pop-01.json',
+    renderer: 'svg', 
+    loop: true,
+    autoplay: true, 
+});
+const pop02_animation = lottie.loadAnimation({
+    container: document.getElementById('pop02'), 
+    path: 'assets/json/pop-02.json',
+    renderer: 'svg', 
+    loop: true,
+    autoplay: true, 
+});
+const pop03_animation = lottie.loadAnimation({
+    container: document.getElementById('pop03'), 
+    path: 'assets/json/pop-chk.json',
+    renderer: 'svg', 
+    loop: true,
+    autoplay: true, 
+});
+// const pop04_animation = lottie.loadAnimation({
+//     container: document.getElementById('pop04'), 
+//     path: 'assets/json/pop-04.json',
+//     renderer: 'svg', 
+//     loop: true,
+//     autoplay: true, 
+// });
+const pop05_animation = lottie.loadAnimation({
+    container: document.getElementById('pop05'),
+    path: 'assets/json/pop-fail.json',
+    renderer: 'svg', 
+    loop: true,
+    autoplay: true, 
+});
+const pop06_animation = lottie.loadAnimation({
+    container: document.getElementById('pop06'),
+    path: 'assets/json/pop-fail.json',
+    renderer: 'svg', 
+    loop: true,
+    autoplay: true, 
+});
+const pop07_animation = lottie.loadAnimation({
+    container: document.getElementById('pop07'), 
+    path: 'assets/json/pop-chk.json',
+    renderer: 'svg', 
+    loop: true,
+    autoplay: true, 
+});
+//________________________ sub-pop 팝업창 로티 애니메이션 ________________________//
 
 
 
@@ -218,7 +301,6 @@ $('.pop-area .step03-btn').click(function() {
 //     }
 // }
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
-
 
 
 

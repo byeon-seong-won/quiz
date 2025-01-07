@@ -47,6 +47,9 @@
 
 
 /* progress bar */
+.swiper-pagination {
+    z-index: 1 !important;
+}
 .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
     position: fixed;
     left: 0 !important;
@@ -116,7 +119,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 .swiper-button-wrap .swiper-button {
     width: 100%;
@@ -176,28 +179,21 @@
     left: 0;
     height: 100vh;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
 }
-
 .pop-area {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
-    width: 90%;
-    padding: 16px;
+    z-index: 5;
+    width: 100%;
+    padding: 28px 16px 16px 16px;
     background: #fff;
     border-radius: 30px;
     animation: slideUp 0.4s forwards;  
 }
-.pop-area > div {
+.pop-area .txt-box {
     padding-left: 6px;
-}
-.slide-pop {
-    display: none;
-}
-.on {
-    display: block;
 }
 @keyframes slideUp {
     0% {
@@ -209,12 +205,13 @@
         opacity: 1;
     }
 }
-
 .slide-pop .bar {
-    display: block;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 4px;
-    margin: 0 auto 8px;
     background: #E6E6E6;
     border-radius: 10px;
 }
@@ -242,6 +239,10 @@
     color: #fff;
     letter-spacing: -0.9px;
     line-height: normal;
+    z-index: 100;
+}
+.slide-pop.step01 .pop-area {
+    padding-top: 38px;
 }
 .slide-pop.step02 img {
     width: 192px;
@@ -312,7 +313,6 @@
     transform: translate(-50%,-50%);
     z-index: 1;
     width: 90%;
-    padding: 0 16px 16px;
     background: #fff;
     border-radius: 30px;
     display: flex;
@@ -323,50 +323,64 @@
 .sub-pop-area > div {
     width: 100%;
 }
+
+/* _____ 팝업창 type1 _____ */
 .sub-pop-area .type1 {
+    position: relative;
     height: 233px;
+    text-align: center;
+    padding: 0 16px 16px;
 }
 
-
-/* 로티 커스텀 */
-.sub-pop-area dotlottie-player {
+/* 로티 애니메이션 */
+.sub-pop-area .type1 > div {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
-.sub-pop-area .pop01 dotlottie-player {
-    height: 98px;
+.sub-pop-area #pop01 svg {
+    height: 98px !important;
 }
-.sub-pop-area .pop02 dotlottie-player {
-    height: 90px;
+.sub-pop-area #pop02 svg {
+    height: 90px !important;
 }
-.sub-pop-area .pop03 dotlottie-player {
-    top: 25px;
-    height: 44px;
+.sub-pop-area #pop03 {
+    top: 25px !important;
 }
-.sub-pop-area .pop04 dotlottie-player {
-    top: 17px;
-    height: 55px;
+.sub-pop-area #pop03 svg {
+    height: 44px !important;
 }
-.sub-pop-area .pop05 dotlottie-player {
-    top: 15px;
-    height: 65px;
+.sub-pop-area #pop04 {
+    top: 17px !important;
 }
-.sub-pop-area .pop06 dotlottie-player {
-    top: 15px;
-    height: 65px;
+.sub-pop-area #pop04 svg {
+    top: 17px !important;
+    height: 55px !important;
 }
-.sub-pop-area .pop07 dotlottie-player {
-    top: 25px;
-    height: 44px;
+.sub-pop-area #pop05 {
+    top: 15px !important;
 }
-/* 로티 커스텀 */
+.sub-pop-area #pop05 svg {
+    top: 15px !important;
+    height: 65px !important;
+}
+.sub-pop-area #pop06 {
+    top: 15px !important;
+}
+.sub-pop-area #pop06 svg {
+    top: 15px !important;
+    height: 65px !important;
+}
+.sub-pop-area #pop07 {
+    top: 25px !important;
+}
+.sub-pop-area #pop07 svg {
+    top: 25px !important;
+    height: 44px !important;
+}
+/* 로티 애니메이션 */
 
-
-.sub-pop-area .type1 {
-    text-align: center;
-}
 .sub-pop-area .type1 p:nth-of-type(1) {
     margin-top: 85px;
     font-size: 22px;
@@ -394,11 +408,13 @@
     letter-spacing: -0.9px;
     line-height: normal;
 }
+/* _____ 팝업창 type1 _____ */
 
 
-/* 문의하기 */
+
+/* _____ 팝업창 type2 문의하기 _____ */
 .sub-pop-area .type2 {
-    padding-top: 24px;
+    padding: 24px 16px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -462,7 +478,7 @@
     background: #496DDB;
     color: #fff;
 }
-/* 문의하기 */
+/* _____ 팝업창 type2 문의하기 _____ */
 /* sub 팝업창 */
 /*___________________공통___________________*/
 
@@ -835,7 +851,10 @@
         padding: 10px;
         border-radius: 22px;
     }
-    .pop-area > div {
+    .pop-area {
+        padding: 21px 12px 12px 12px;
+    }
+    .pop-area .txt-box {
         padding-left: 4px;
     }
     .slide-pop p {
@@ -854,9 +873,9 @@
         letter-spacing: -0.7px;
     }
     .slide-pop .bar {
+        top: 12px;
         width: 30px;
         height: 3px;
-        margin: 0 auto 6px;
         border-radius: 7px;
     }
     .slide-pop.step02 img {
@@ -979,41 +998,52 @@
 
     /* sub 팝업창 */
     .sub-pop-area {
-        padding: 0 12px 12px;
         border-radius: 22px;
     }
     .sub-pop-area .type1 {
         height: 174px;
+        padding: 0 12px 12px;
     }
 
-    /* 로티 커스텀 */
-    .sub-pop-area .pop01 dotlottie-player {
-        height: 73px;
+    /* 로티 애니메이션 */
+    .sub-pop-area #pop01 svg {
+        height: 73px !important;
     }
-    .sub-pop-area .pop02 dotlottie-player {
-        height: 67px;
+    .sub-pop-area #pop02 svg {
+        height: 67px !important;
     }
-    .sub-pop-area .pop03 dotlottie-player {
-        top: 19px;
-        height: 33px;
+    .sub-pop-area #pop03 {
+        top: 19px !important;
     }
-    .sub-pop-area .pop04 dotlottie-player {
-        top: 13px;
-        height: 41px;
+    .sub-pop-area #pop03 svg {
+        height: 33px !important;
     }
-    .sub-pop-area .pop05 dotlottie-player {
-        top: 11px;
-        height: 65px;
+    .sub-pop-area #pop04 {
+        top: 13px !important;
     }
-    .sub-pop-area .pop06 dotlottie-player {
-        top: 11px;
-        height: 49px;
+    .sub-pop-area #pop04 svg {
+        height: 41px !important;
     }
-    .sub-pop-area .pop07 dotlottie-player {
-        top: 25px;
-        height: 44px;
+    .sub-pop-area #pop05 {
+        top: 11px !important;
     }
-    /* 로티 커스텀 */
+    .sub-pop-area #pop05 svg {
+        height: 65px !important;
+    }
+    .sub-pop-area #pop06 {
+        top: 11px !important;
+    }
+    .sub-pop-area #pop06 svg {
+        height: 49px !important;
+    }
+    .sub-pop-area #pop07 {
+        top: 25px !important;
+    }
+    .sub-pop-area #pop07 svg {
+        height: 44px !important;
+    }
+    /* 로티 애니메이션 */
+
 
     .sub-pop-area .type1 p:nth-of-type(1) {
         margin-top: 63px;
@@ -1034,7 +1064,7 @@
     }
     /* 문의하기 */
     .sub-pop-area .type2 {
-        padding-top: 15px;
+        padding: 18px 12px 12px;
     }
     .sub-pop-area .type2 h2 {
         margin-top: 3px;

@@ -6,15 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="./assets/js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- lottie -->
     <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.9.4/build/player/lottie.min.js"></script>
-    <!-- lottie -->
-
-
-    <script src="./assets/js/index.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Phase -->
+    <script src="https://cdn.jsdelivr.net/npm/@dotlottie/player@1.0.0/dist/dotlottie-player.js"></script>
 </head>
 <body>
 
@@ -60,6 +58,11 @@
                         </div>
                         <div class="img-box animation" id="step02"></div>
                     </div>
+                    <div class="swiper-button-wrap step02">
+                        <button>가이드 건너뛰기</button>
+                        <div class="swiper-button-prev swiper-button">이전</div>
+                        <div class="swiper-button-next swiper-button">다음</div>
+                    </div>
                 </div>
                 <!--___step-02___-->
 
@@ -72,6 +75,10 @@
                             <span>관련 해시태그</span>를 찾아주세요</p>
                         </div>
                         <div class="img-box animation" id="step03"></div>
+                    </div>
+                    <div class="swiper-button-wrap step03">
+                        <div class="swiper-button-prev swiper-button">이전</div>
+                        <div class="swiper-button-next swiper-button">미션시작</div>
                     </div>
                 </div>
                 <!--___step-03___-->
@@ -90,11 +97,11 @@
                             </div>
                         </div>
                         <div class="info-box">
-                            <p>잘먹잘싸 엄청 긴 텍스트일경우<span>공식</span></p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quisquam?<span>공식</span></p>
                             <p>17,800원</p>
                         </div>
                         <!-- 텍스트 필드 type 1 : 자릿수 블록  -->
-                        <div class="input-block-wrap">
+                        <!-- <div class="input-block-wrap">
                             <input type="text" maxlength="1" class="code-input" /> 
                             <input type="text" maxlength="1" class="code-input" />
                             <input type="text" maxlength="1" class="code-input" />
@@ -102,8 +109,8 @@
                             <input type="text" maxlength="1" class="code-input" />
                             <input type="text" maxlength="1" class="code-input" />
                             <input type="text" maxlength="1" class="code-input" />
-                            <button value="clear" class="btn-reset block" onclick="vibrateDevice()"></button>
-                        </div>
+                            <button value="clear" class="btn-reset block"></button>
+                        </div> -->
                         <!-- <div class="input-block-wrap wrong" id="myInput">
                             <input type="text" maxlength="1" class="code-input" />
                             <input type="text" maxlength="1" class="code-input" />
@@ -127,86 +134,29 @@
                             </div>
                         </div> -->
                          
-                        <!-- <div class="input-block-wrap wrong">
+                        <div class="input-block-wrap wrong">
                             <div>
                                 <input type="text" class="text-input" />
                                 <button value="clear" class="btn-reset default"></button>
                             </div>
                             <span>오답이에요. 다시 확인해주세요.</span>
-                        </div> -->
+                        </div>
                         <!-- 텍스트 필드 type 2 : 기본 입력창  -->
 
+                    </div>
+                    <div class="swiper-button-wrap">
+                        <div class="swiper-button-prev swiper-button">다시 확인하기</div>
+                        <div class="swiper-button-next swiper-button">정답 입력</div>
                     </div>
                 </div>
                 <!--___step-04___-->
 
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-wrap">
-                <div class="swiper-button-prev swiper-button">이전</div>
-                <div class="swiper-button-next swiper-button">다음</div>
-            </div>
         </div>
     </div>
 
 
-
-
-
-
-
-    <!-- step-01 팝업창 : 키워드 복사 -->
-    <div class="slide-pop step01" data-tab="pop-step01">
-        <div class="dimmedarea"></div>
-        <div class="pop-area">
-            <div>
-                <span class="bar"></span>
-                <p>키워드가 복사되었어요</p>
-                <p>검색창에 붙여넣기 해주세요</p>
-                <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
-            </div>
-            <button class="step01-btn">이어하기</button>
-        </div>  
-    </div>
-    <!-- step-01 팝업창 : 키워드 복사 -->
-
-
-
-    <!-- step-02 팝업창 : 확인했어요 -->
-    <div class="slide-pop step02" data-tab="pop-step02" style="display: none;">
-        <div class="dimmedarea"></div>
-        <div class="pop-area">
-            <div>
-                <p>가격비교 페이지로 랜딩할 경우,</p>
-                <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
-                <p>클릭해주세요</p>
-            </div>
-            <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
-            <button class="step02-btn">네, 확인했어요</button>
-        </div>
-    </div>
-    <!-- step-02 팝업창 : 확인했어요 -->
-
-
-
-    <!-- step-03 팝업창 : 검색하러가기 -->
-    <div class="slide-pop step03" data-tab="pop-step03" style="display: none;">
-        <div class="dimmedarea"></div>
-        <div class="pop-area">
-            <p>복사한 키워드를 검색창에 붙여넣고,</p>
-            <p><span class="mark">아래 상품을 찾아주세요</span></p>
-            <div class="img-box">
-                <img src="./assets/img/prd.png" alt="복사한 키워드를 검색창에 붙여넣고,아래 상품을 찾아주세요">
-            </div>
-            <div class="info-box">
-                <p>잘먹고잘싸는강아지사료<span>공식</span></p>
-                <p>17,800원</p>
-            </div>
-            <button>검색하러가기</button>
-            <span class="adtxt">&apos;광고&#9432;&apos; 상품은 클릭하지 마세요!</span>
-        </div>
-    </div>
-    <!-- step-03 팝업창 : 검색하러가기 -->
 
 
 
@@ -218,12 +168,9 @@
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
             <div class="type1">
-                <!-- (1) 정답입니다 -->
-                <div class="pop01">
-                    <div id="pop01"></div>
-                    <p>정답입니다!</p>
-                    <p>리워드가 적립됐어요</p>
-                </div>
+                <div id="pop01"></div>
+                <p>정답입니다!</p>
+                <p>리워드가 적립됐어요</p>
                 <button>확인</button>
             </div>
         </div>
@@ -234,10 +181,11 @@
     <div class="sub-pop" data-tab="wrong" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
-            <div class="pop02">
-                <dotlottie-player src="https://lottie.host/b63e69a3-2088-4b2f-8132-1c2d6711326e/CxOOVpafNN.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+            <div class="type1">
+                <div id="pop02"></div>
                 <p>아쉬워요!</p>
                 <p>종료된 이벤트에요</p>
+                <button>확인</button>
             </div>
         </div>
     </div>
@@ -247,10 +195,11 @@
     <div class="sub-pop" data-tab="complete" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
-            <div class="pop03">
-                <dotlottie-player src="https://lottie.host/4c4e2eb0-dd29-47f4-b2c9-6976ada3a753/1HxXSNLEXz.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+            <div class="type1">
+                <div id="pop03"></div>
                 <p>참여완료!</p>
                 <p>이미 참여한 미션이에요</p>
+                <button>확인</button>
             </div>
         </div>
     </div>
@@ -259,10 +208,11 @@
     <div class="sub-pop" data-tab="today" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
-            <div class="pop04">
-                <dotlottie-player src="https://lottie.host/9541eb4e-070e-4fc7-891f-ae5de7444084/crdwWc6x0E.lottie" speed="1" loop autoplay></dotlottie-player>
+            <div class="type1">
+                <div id="pop04"></div>
                 <p>오늘의 퀴즈는 여기까지!</p>
                 <p>내일 다시 참여 가능해요.</p>
+                <button>확인</button>
             </div>
         </div>
     </div>
@@ -272,41 +222,44 @@
     <div class="sub-pop" data-tab="error" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
-            <div class="pop05">
+            <div class="type1">
+                <div id="pop05"></div>
                 <p class="mark">등록오류</p>
                 <p>이미지가 정상적으로 등록되지 않았어요</p>
+                <button>확인</button>
             </div>
         </div>
     </div>
     <!-- (5) 등록오류 -->
 
-    <!-- (6) 참여실패 -->
+    <!-- (6) 미션실패 -->
     <div class="sub-pop" data-tab="fail" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
-            <div class="pop06">
-                <dotlottie-player src="https://lottie.host/9541eb4e-070e-4fc7-891f-ae5de7444084/crdwWc6x0E.lottie" speed="1" loop autoplay></dotlottie-player>
-                <p class="mark">참여실패</p>
+            <div class="type1">
+                <div id="pop06"></div>
+                <p class="mark">미션실패</p>
                 <p>이미지를 다시 캡쳐해서 올려주세요</p>
+                <button>확인</button>
             </div>
         </div>
     </div>
-    <!-- (6) 참여실패 -->
+    <!-- (6) 미션실패 -->
     
     <!-- (7) 등록완료 -->
     <div class="sub-pop" data-tab="finish" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
-            <div class="pop07">
-                <dotlottie-player src="https://lottie.host/611e75bc-ebe1-49de-b8d3-9931d7ae359d/ifImx2ua1Y.lottie" speed="1" loop autoplay></dotlottie-player>
+            <div class="type1">
+                <div id="pop07"></div>
                 <p>등록완료!</p>
                 <p>문의가 정상적으로 등록됐어요</p>
+                <button>확인</button>
             </div>
         </div>
     </div>
     <!-- (7) 등록완료 -->
     
-
     <!-- (8) 문의하기 -->
     <div class="sub-pop" data-tab="faq" style="display: none;">
         <div class="dimmedarea"></div>
