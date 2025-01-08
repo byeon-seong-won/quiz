@@ -97,6 +97,7 @@ var swiper = new Swiper('.swiper', {
 
                 // ---- step2 팝업창 ---- 
                 $('.step02 .swiper-button-next').click(function() {
+                    alert('step02 팝업나옴')
                     $('.wrap').append(pop_step02);
                     $('.slide-pop.step02 button').click(function() {
                         $('.slide-pop.step02').remove();
@@ -104,6 +105,19 @@ var swiper = new Swiper('.swiper', {
                     })
                 })
                 // ---- step2 팝업창 ---- 
+
+
+                // ---- 가이드 건너뀌기 ---- 
+                $('.skip').click(function() {
+                    alert('sdfsdsf')
+                    $('.wrap').append(pop_step03);
+                    // $('.slide-pop.step03 button').click(function() {
+                    //     $('.slide-pop.step03').remove();
+                    // })
+                })
+                // ---- 가이드 건너뀌기 ---- 
+
+
             } 
 
             // step3
@@ -125,7 +139,7 @@ var swiper = new Swiper('.swiper', {
 
             // step4
             if (idx === 3) { 
-                const imgTag = '<a href="#" class="banner"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
+                const imgTag = '<a href="https://jamonglab.com/quiz.html" class="banner" target="_blank"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.wrap').prepend(imgTag);
                 $('.swiper-button-wrap').css('transform', 'translateY(-34px)');
                 // $('.input-block-wrap input:nth-of-type(1)').focus();
@@ -317,15 +331,6 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
-//________________________ 가이드 건너뀌기 ________________________//
-$('.skip').click(function() {
-    $('.wrap').append(pop_step03);
-    $('.slide-pop.step03 button').click(function() {
-        // ~~~~~ 검색하러가기 사이트 이동 ~~~~~ 
-        $('.slide-pop.step03').remove();
-    })
-})
-//________________________ 가이드 건너뀌기 ________________________//
 
 
 
