@@ -124,7 +124,7 @@ var swiper = new Swiper('.swiper', {
                 const imgTag = '<a href="#" class="banner"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.wrap').prepend(imgTag);
                 $('.swiper-button-wrap').css('transform', 'translateY(-34px)');
-                $('.input-block-wrap input:nth-of-type(1)').focus();
+                // $('.input-block-wrap input:nth-of-type(1)').focus();
             } else {
                 $('.wrap .banner').remove();
                 $('.swiper-button-wrap').css('transform', 'translateY(0)');
