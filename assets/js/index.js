@@ -64,7 +64,7 @@ var swiper = new Swiper('.swiper', {
       type: 'progressbar',
     },
     navigation: {
-        nextEl: '.swiper-button-next',
+        // nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     on: {
@@ -86,6 +86,10 @@ var swiper = new Swiper('.swiper', {
         slideChange: function() {
             const idx = this.realIndex;
 
+            if (idx === 0) { 
+                keywordAni();
+            } 
+            
             // step2
             if (idx === 1) { 
                 step2_animation.goToAndStop(0, true);
@@ -95,8 +99,8 @@ var swiper = new Swiper('.swiper', {
                 $('.step02 .swiper-button-next').click(function() {
                     $('.wrap').append(pop_step02);
                     $('.slide-pop.step02 button').click(function() {
-                        swiper.slideTo(2);
                         $('.slide-pop.step02').remove();
+                        swiper.slideTo(2);
                     })
                 })
                 // ---- step2 팝업창 ---- 
@@ -113,6 +117,7 @@ var swiper = new Swiper('.swiper', {
                     $('.slide-pop.step03 button').click(function() {
                         // ~~~~~ 검색하러가기 사이트 이동 ~~~~~ 
                         $('.slide-pop.step03').remove();
+                        swiper.slideTo(3);
                     })
                 })
                 // ---- step3 팝업창 ---- 
@@ -165,10 +170,6 @@ const step3_animation = lottie.loadAnimation({
 
 
 
-
-
-
-
 //________________________ 키워드복사하기 애니메이션 ________________________//
 function keywordAni() {
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
@@ -193,7 +194,10 @@ function keywordAni() {
             });
         }, 200)
     }, 500)
+
 }
+
+
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
 
@@ -254,13 +258,13 @@ const pop03_animation = lottie.loadAnimation({
     loop: 2,
     autoplay: true, 
 });
-// const pop04_animation = lottie.loadAnimation({
-//     container: document.getElementById('pop04'), 
-//     path: 'assets/json/pop-04.json',
-//     renderer: 'svg', 
-//     loop: true,
-//     autoplay: true, 
-// });
+const pop04_animation = lottie.loadAnimation({
+    container: document.getElementById('pop04'), 
+    path: 'assets/json/pop-04.json',
+    renderer: 'svg', 
+    loop: 2,
+    autoplay: true, 
+});
 const pop05_animation = lottie.loadAnimation({
     container: document.getElementById('pop05'),
     path: 'assets/json/pop-fail.json',
@@ -307,8 +311,7 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
-
-// 가이드 건너뀌기
+//________________________ 가이드 건너뀌기 ________________________//
 $('.skip').click(function() {
     $('.wrap').append(pop_step03);
     $('.slide-pop.step03 button').click(function() {
@@ -316,3 +319,37 @@ $('.skip').click(function() {
         $('.slide-pop.step03').remove();
     })
 })
+//________________________ 가이드 건너뀌기 ________________________//
+
+
+
+
+
+
+
+
+
+
+//________________________ 웹 어플리케이션 모바일 화면 확대 방지 ________________________//
+document.documentElement.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+         event.preventDefault(); 
+       } 
+   }, false);
+
+var lastTouchEnd = 0; 
+
+document.documentElement.addEventListener('touchend', function (event) {
+    var now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+         event.preventDefault(); 
+       } lastTouchEnd = now; 
+   }, false);
+//________________________ 웹 어플리케이션 모바일 화면 확대 방지 ________________________//
+
+
+
+
+
+
+
