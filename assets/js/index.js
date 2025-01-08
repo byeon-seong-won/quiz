@@ -108,7 +108,6 @@ var swiper = new Swiper('.swiper', {
 
                 // ---- 가이드 건너뀌기 ---- 
                 $('.skip').click(function() {
-                    alert('sdfsdsf')
                     $('.wrap').append(pop_step03);
                     // $('.slide-pop.step03 button').click(function() {
                     //     $('.slide-pop.step03').remove();
