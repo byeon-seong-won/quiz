@@ -308,6 +308,11 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
-
-
-
+// 가이드 건너뀌기
+$('.skip').click(function() {
+    $('.wrap').append(pop_step03);
+    $('.slide-pop.step03 button').click(function() {
+        // ~~~~~ 검색하러가기 사이트 이동 ~~~~~ 
+        $('.slide-pop.step03').remove();
+    })
+})
