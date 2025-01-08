@@ -330,26 +330,12 @@ $('.skip').click(function() {
 
 
 
-//________________________ 웹 어플리케이션 모바일 화면 확대 방지 ________________________//
-document.documentElement.addEventListener('touchstart', function (event) {
-    if (event.touches.length > 1) {
-         event.preventDefault(); 
-       } 
-   }, false);
-
-var lastTouchEnd = 0; 
-
-document.documentElement.addEventListener('touchend', function (event) {
-    var now = (new Date()).getTime();
-    if (now - lastTouchEnd <= 300) {
-         event.preventDefault(); 
-       } lastTouchEnd = now; 
-   }, false);
-//________________________ 웹 어플리케이션 모바일 화면 확대 방지 ________________________//
-
-
-
-
-
-
-
+//________________________ 줌방지 ________________________//
+document.body.addEventListener('touchstart', function(e) {
+    if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }
+  }, {passive: false});
+//________________________ 줌방지 ________________________//
