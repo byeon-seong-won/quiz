@@ -145,7 +145,7 @@ const step2_animation = lottie.loadAnimation({
   container: document.getElementById('lottie-step02'),
   path: 'assets/json/hash_step2.json',
   renderer: 'svg',
-  loop: false,
+  loop: 2,
   autoplay: true,
 });
 
@@ -154,7 +154,7 @@ const step3_animation = lottie.loadAnimation({
   container: document.getElementById('lottie-step03'),
   path: 'assets/json/hash_step3.json',
   renderer: 'svg',
-  loop: false,
+  loop: 2,
   autoplay: true,
 });
 //________________________ step별 애니메이션 ________________________//
@@ -237,21 +237,21 @@ const pop01_animation = lottie.loadAnimation({
     container: document.getElementById('pop01'), 
     path: 'assets/json/pop-01.json',
     renderer: 'svg', 
-    loop: true,
+    loop: 2,
     autoplay: true, 
 });
 const pop02_animation = lottie.loadAnimation({
     container: document.getElementById('pop02'), 
     path: 'assets/json/pop-02.json',
     renderer: 'svg', 
-    loop: true,
+    loop: 2,
     autoplay: true, 
 });
 const pop03_animation = lottie.loadAnimation({
     container: document.getElementById('pop03'), 
     path: 'assets/json/pop-chk.json',
     renderer: 'svg', 
-    loop: true,
+    loop: 2,
     autoplay: true, 
 });
 // const pop04_animation = lottie.loadAnimation({
@@ -265,21 +265,21 @@ const pop05_animation = lottie.loadAnimation({
     container: document.getElementById('pop05'),
     path: 'assets/json/pop-fail.json',
     renderer: 'svg', 
-    loop: true,
+    loop: 2,
     autoplay: true, 
 });
 const pop06_animation = lottie.loadAnimation({
     container: document.getElementById('pop06'),
     path: 'assets/json/pop-fail.json',
     renderer: 'svg', 
-    loop: true,
+    loop: 2,
     autoplay: true, 
 });
 const pop07_animation = lottie.loadAnimation({
     container: document.getElementById('pop07'), 
     path: 'assets/json/pop-chk.json',
     renderer: 'svg', 
-    loop: true,
+    loop: 2,
     autoplay: true, 
 });
 //________________________ sub-pop 팝업창 로티 애니메이션 ________________________//
