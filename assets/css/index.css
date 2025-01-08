@@ -114,7 +114,8 @@
 /* 하단 고정 버튼 */
 .swiper-button-wrap {
     position: absolute;
-    bottom: 34px;
+    /* bottom: 34px; */
+    bottom: 9.06vw;
     z-index: 2;
     width: 100%;
     display: flex;
@@ -623,7 +624,6 @@
 /*___________________step4___________________*/
 .cont-area .info-box {
     margin-top: 10px;
-    padding: 0 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -657,7 +657,7 @@
     letter-spacing: -0.4px;
 }
 .input-block-wrap {
-    margin: 30px 0 60px;
+    margin: 30px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -676,7 +676,10 @@
     transform: translateY(-50%);
 }
 .input-block-wrap.wrong {
-    margin-top: 15px;
+    margin-top: 0;
+}
+.input-block-wrap#myInput.wrong {
+    margin-top: 0;
 }
 
 
@@ -784,7 +787,6 @@
         margin-top: 20px;
     }
 }
-
 @media screen and (max-height: 650px) {
     .cont-area {
         margin-top:28px;

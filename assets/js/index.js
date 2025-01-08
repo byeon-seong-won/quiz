@@ -121,16 +121,14 @@ var swiper = new Swiper('.swiper', {
             // step4
             if (idx === 3) { 
 
-                // ---- 하단 배너이미지 ---- 
                 const imgTag = '<a href="#" class="banner"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
-                $('.swiper').append(imgTag);
-                $('.swiper-button-wrap').css('transform', 'translateY(-48px)');
+                $('.wrap').prepend(imgTag);
+                $('.swiper-button-wrap').css('transform', 'translateY(-34px)');
                 $('.input-block-wrap input:nth-of-type(1)').focus();
             } else {
-                $('.swiper .banner').remove();
+                $('.wrap .banner').remove();
                 $('.swiper-button-wrap').css('transform', 'translateY(0)');
             }
-            // ---- 하단 배너이미지 ---- 
         }
     }
 });
