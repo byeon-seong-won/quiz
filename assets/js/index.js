@@ -97,7 +97,6 @@ var swiper = new Swiper('.swiper', {
 
                 // ---- step2 팝업창 ---- 
                 $('.step02 .swiper-button-next').click(function() {
-                    alert('step02 팝업나옴')
                     $('.wrap').append(pop_step02);
                     $('.slide-pop.step02 button').click(function() {
                         $('.slide-pop.step02').remove();
