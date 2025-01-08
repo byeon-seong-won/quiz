@@ -125,7 +125,6 @@ var swiper = new Swiper('.swiper', {
 
             // step4
             if (idx === 3) { 
-
                 const imgTag = '<a href="#" class="banner"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.wrap').prepend(imgTag);
                 $('.swiper-button-wrap').css('transform', 'translateY(-34px)');
@@ -151,7 +150,7 @@ const step2_animation = lottie.loadAnimation({
   path: 'assets/json/hash_step2.json',
   renderer: 'svg',
   loop: 2,
-  autoplay: true,
+  autoplay: false,
 });
 
 
@@ -160,9 +159,12 @@ const step3_animation = lottie.loadAnimation({
   path: 'assets/json/hash_step3.json',
   renderer: 'svg',
   loop: 2,
-  autoplay: true,
+  autoplay: false,
 });
 //________________________ step별 애니메이션 ________________________//
+
+
+
 
 
 
@@ -196,8 +198,6 @@ function keywordAni() {
     }, 500)
 
 }
-
-
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
 
@@ -330,7 +330,7 @@ $('.skip').click(function() {
 
 
 
-//________________________ 줌방지 ________________________//
+//________________________ 줌방지 참고 ________________________//
 document.body.addEventListener('touchstart', function(e) {
     if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
       e.preventDefault();
@@ -338,4 +338,4 @@ document.body.addEventListener('touchstart', function(e) {
       e.stopImmediatePropagation();
     }
   }, {passive: false});
-//________________________ 줌방지 ________________________//
+//________________________ 줌방지 참고 ________________________//
