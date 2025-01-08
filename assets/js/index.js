@@ -194,9 +194,15 @@ function keywordAni() {
                     }
                 });
             });
+
+            setTimeout(()=> {
+                $('.cont-area .img-box .keyword').removeClass('animate');
+            }, 1000)
+
+
+
         }, 200)
     }, 500)
-
 }
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
