@@ -210,8 +210,6 @@ function keywordAni() {
                 $('.cont-area .img-box .keyword').removeClass('animate');
             }, 1000)
 
-
-
         }, 200)
     }, 500)
 }
@@ -331,13 +329,6 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
-
-
-
-
-
-
-
 //________________________ 줌방지 참고 ________________________//
 document.body.addEventListener('touchstart', function(e) {
     if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
@@ -347,3 +338,23 @@ document.body.addEventListener('touchstart', function(e) {
     }
   }, {passive: false});
 //________________________ 줌방지 참고 ________________________//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//________________________ input 한글자씩 ________________________//
+
+//________________________ input 한글자씩 ________________________//
+
