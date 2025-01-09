@@ -21,7 +21,7 @@
         <!--___공통 header___-->
         <div class="header-area">
             <a href="#"></a>
-            <button class="btn-faq">문제가 발생하나요?</button>
+            <button class="btn-faq" id="pop-faq">문제가 발생하나요?</button>
         </div>     
         <!--___공통 header___-->
 
@@ -171,7 +171,7 @@
                 <div id="pop01"></div>
                 <p>정답입니다!</p>
                 <p>리워드가 적립됐어요</p>
-                <button>확인</button>
+                <button class="btn-close">확인</button>
             </div>
         </div>
     </div>
@@ -185,7 +185,7 @@
                 <div id="pop02"></div>
                 <p>아쉬워요!</p>
                 <p>종료된 이벤트에요</p>
-                <button>확인</button>
+                <button class="btn-close">확인</button>
             </div>
         </div>
     </div>
@@ -199,7 +199,7 @@
                 <div id="pop03"></div>
                 <p>참여완료!</p>
                 <p>이미 참여한 미션이에요</p>
-                <button>확인</button>
+                <button class="btn-close">확인</button>
             </div>
         </div>
     </div>
@@ -212,7 +212,7 @@
                 <div id="pop04"></div>
                 <p>오늘의 퀴즈는 여기까지!</p>
                 <p>내일 다시 참여 가능해요.</p>
-                <button>확인</button>
+                <button class="btn-close">확인</button>
             </div>
         </div>
     </div>
@@ -226,7 +226,7 @@
                 <div id="pop05"></div>
                 <p class="mark">등록오류</p>
                 <p>이미지가 정상적으로 등록되지 않았어요</p>
-                <button>확인</button>
+                <button class="btn-close">확인</button>
             </div>
         </div>
     </div>
@@ -240,7 +240,7 @@
                 <div id="pop06"></div>
                 <p class="mark">미션실패</p>
                 <p>이미지를 다시 캡쳐해서 올려주세요</p>
-                <button>확인</button>
+                <button class="btn-close">확인</button>
             </div>
         </div>
     </div>
@@ -254,14 +254,14 @@
                 <div id="pop07"></div>
                 <p>등록완료!</p>
                 <p>문의가 정상적으로 등록됐어요</p>
-                <button>확인</button>
+                <button class="btn-close">확인</button>
             </div>
         </div>
     </div>
     <!-- (7) 등록완료 -->
     
     <!-- (8) 문의하기 -->
-    <div class="sub-pop" style="display: none;">
+    <div class="sub-pop" data-pop="pop-faq" style="display: none;">
         <div class="dimmedarea"></div>
         <div class="sub-pop-area">
             <div class="type2">
@@ -272,7 +272,7 @@
                 <textarea placeholder="* 정확한 답변을 위해 상세 내용을 입력해주세요.
 * 문의 답변에는 영업일 기준 3~5일 정도 소요될 수 있습니다."></textarea>
                 <div class="btn-box">
-                    <button>취소</button>
+                    <button class="btn-close">취소</button>
                     <button>문의 등록</button>
                 </div>
             </div>

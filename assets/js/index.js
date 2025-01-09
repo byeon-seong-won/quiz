@@ -70,7 +70,12 @@ var swiper = new Swiper('.swiper', {
     on: {
         // 초기 세팅
         init: function() {
-            keywordAni();
+
+            setTimeout(()=> {
+                $('.cont-area .img-box .keyword').removeClass('animate');
+                keywordAni()
+            },3000)
+
 
             // ---- step1 팝업창 ---- 
             $('.btn-area button').click(function() {
@@ -87,13 +92,17 @@ var swiper = new Swiper('.swiper', {
             const idx = this.realIndex;
 
             if (idx === 0) { 
-                keywordAni();
+                setTimeout(()=> {
+                    $('.cont-area .img-box .keyword').removeClass('animate');
+                    keywordAni()
+                },3000)
             } 
             
             // step2
             if (idx === 1) { 
                 step2_animation.goToAndStop(0, true);
                 step2_animation.play();
+                
 
                 // ---- step2 팝업창 ---- 
                 $('.step02 .swiper-button-next').off('click').on('click', function(){
@@ -188,7 +197,8 @@ function keywordAni() {
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
-    
+
+
     setTimeout(() => {
         $('.cont-area .img-box .keyword').addClass('animate');
 
@@ -196,6 +206,8 @@ function keywordAni() {
             const txt = '키워드 복사하기';
             $('.cont-area .img-box .keyword').each(function() {
                 const keywordSpans = $(this).find('span');
+                const originalText = keywordSpans.map((_, span) => $(span).text()).get().join('');
+                console.log(originalText + 'originalText')
 
                 keywordSpans.each(function(index) {
                     if (index < txt.length) {
@@ -204,18 +216,12 @@ function keywordAni() {
                         $(this).text(''); 
                     }
                 });
+
             });
-
-            setTimeout(()=> {
-                $('.cont-area .img-box .keyword').removeClass('animate');
-            }, 1000)
-
         }, 200)
     }, 500)
 }
 //________________________ 키워드복사하기 애니메이션 ________________________//
-
-
 
 
 
@@ -354,7 +360,33 @@ document.body.addEventListener('touchstart', function(e) {
 
 
 
+//________________________ input 한글자씩 이동 ________________________//
+// document.addEventListener('DOMContentLoaded', () => {
+//     const inputs = document.querySelectorAll('.code-input');
+
+//     inputs.forEach((input, index) => {
+//         input.addEventListener('input', (event) => {
+//             const current = event.target;
+//             if (current.value.length >= current.maxLength) {
+//                 const nextInput = inputs[index + 1];
+//                 if (nextInput) {
+//                     nextInput.focus();
+//                 }
+//             }
+//         });
+
+//         input.addEventListener('keydown', (event) => {
+//             if (event.key === 'Backspace' && input.value === '') {
+//                 const prevInput = inputs[index - 1];
+//                 if (prevInput) {
+//                     prevInput.focus();
+//                 }
+//             }
+//         });
+//     });
+// });
 //________________________ input 한글자씩 ________________________//
 
-//________________________ input 한글자씩 ________________________//
+
+
 
