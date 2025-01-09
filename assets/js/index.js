@@ -75,7 +75,7 @@ var swiper = new Swiper('.swiper', {
             // ---- step1 팝업창 ---- 
             $('.btn-area button').click(function() {
                 $('.wrap').append(pop_step01);
-                $('.slide-pop.step01 button').click(function() {
+                $('.slide-pop.step01 button').off('click').on('click', function(){
                     swiper.slideTo(1);
                     $('.slide-pop.step01').remove();
                 })
@@ -96,22 +96,22 @@ var swiper = new Swiper('.swiper', {
                 step2_animation.play();
 
                 // ---- step2 팝업창 ---- 
-                $('.step02 .swiper-button-next').click(function() {
+                $('.step02 .swiper-button-next').off('click').on('click', function(){
                     $('.wrap').append(pop_step02);
                     $('.slide-pop.step02 button').click(function() {
                         $('.slide-pop.step02').remove();
                         swiper.slideTo(2);
                     })
-                })
+                });
                 // ---- step2 팝업창 ---- 
 
 
                 // ---- 가이드 건너뀌기 ---- 
                 $('.skip').click(function() {
                     $('.wrap').append(pop_step03);
-                    // $('.slide-pop.step03 button').click(function() {
-                    //     $('.slide-pop.step03').remove();
-                    // })
+                    $('.slide-pop.step03 button').off('click').on('click', function(){
+                        $('.slide-pop.step03').remove();
+                    })
                 })
                 // ---- 가이드 건너뀌기 ---- 
 
@@ -124,14 +124,13 @@ var swiper = new Swiper('.swiper', {
                 step3_animation.play();
 
                 // ---- step3 팝업창 ---- 
-                $('.step03 .swiper-button-next').click(function() {
+                $('.step03 .swiper-button-next').off('click').on('click', function(){
                     $('.wrap').append(pop_step03);
                     $('.slide-pop.step03 button').click(function() {
-                        // ~~~~~ 검색하러가기 사이트 이동 ~~~~~ 
                         $('.slide-pop.step03').remove();
                         swiper.slideTo(3);
                     })
-                })
+                });
                 // ---- step3 팝업창 ---- 
             }
 
@@ -161,7 +160,7 @@ const step2_animation = lottie.loadAnimation({
   container: document.getElementById('lottie-step02'),
   path: 'assets/json/hash_step2.json',
   renderer: 'svg',
-  loop: 2,
+  loop: 1,
   autoplay: false,
 });
 
@@ -170,7 +169,7 @@ const step3_animation = lottie.loadAnimation({
   container: document.getElementById('lottie-step03'),
   path: 'assets/json/hash_step3.json',
   renderer: 'svg',
-  loop: 2,
+  loop: 1,
   autoplay: false,
 });
 //________________________ step별 애니메이션 ________________________//
@@ -259,49 +258,49 @@ const pop01_animation = lottie.loadAnimation({
     container: document.getElementById('pop01'), 
     path: 'assets/json/pop-01.json',
     renderer: 'svg', 
-    loop: 2,
+    loop: 1,
     autoplay: true, 
 });
 const pop02_animation = lottie.loadAnimation({
     container: document.getElementById('pop02'), 
     path: 'assets/json/pop-02.json',
     renderer: 'svg', 
-    loop: 2,
+    loop: 1,
     autoplay: true, 
 });
 const pop03_animation = lottie.loadAnimation({
     container: document.getElementById('pop03'), 
     path: 'assets/json/pop-chk.json',
     renderer: 'svg', 
-    loop: 2,
+    loop: 1,
     autoplay: true, 
 });
 const pop04_animation = lottie.loadAnimation({
     container: document.getElementById('pop04'), 
     path: 'assets/json/pop-04.json',
     renderer: 'svg', 
-    loop: 2,
+    loop: 1,
     autoplay: true, 
 });
 const pop05_animation = lottie.loadAnimation({
     container: document.getElementById('pop05'),
     path: 'assets/json/pop-fail.json',
     renderer: 'svg', 
-    loop: 2,
+    loop: 1,
     autoplay: true, 
 });
 const pop06_animation = lottie.loadAnimation({
     container: document.getElementById('pop06'),
     path: 'assets/json/pop-fail.json',
     renderer: 'svg', 
-    loop: 2,
+    loop: 1,
     autoplay: true, 
 });
 const pop07_animation = lottie.loadAnimation({
     container: document.getElementById('pop07'), 
     path: 'assets/json/pop-chk.json',
     renderer: 'svg', 
-    loop: 2,
+    loop: 1,
     autoplay: true, 
 });
 //________________________ sub-pop 팝업창 로티 애니메이션 ________________________//
