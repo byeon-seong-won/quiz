@@ -64,18 +64,12 @@ var swiper = new Swiper('.swiper', {
       type: 'progressbar',
     },
     navigation: {
-        // nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     on: {
         // 초기 세팅
         init: function() {
-
-            setTimeout(()=> {
-                $('.cont-area .img-box .keyword').removeClass('animate');
-                keywordAni()
-            },3000)
-
+            keywordAni()
 
             // ---- step1 팝업창 ---- 
             $('.btn-area button').click(function() {
@@ -92,10 +86,7 @@ var swiper = new Swiper('.swiper', {
             const idx = this.realIndex;
 
             if (idx === 0) { 
-                setTimeout(()=> {
-                    $('.cont-area .img-box .keyword').removeClass('animate');
-                    keywordAni()
-                },3000)
+                keywordAni()
             } 
             
             // step2
@@ -115,16 +106,14 @@ var swiper = new Swiper('.swiper', {
                 // ---- step2 팝업창 ---- 
 
 
-                // ---- 가이드 건너뀌기 ---- 
+                // ---- 가이드 건너뛰기 ---- 
                 $('.skip').click(function() {
                     $('.wrap').append(pop_step03);
                     $('.slide-pop.step03 button').off('click').on('click', function(){
                         $('.slide-pop.step03').remove();
                     })
                 })
-                // ---- 가이드 건너뀌기 ---- 
-
-
+                // ---- 가이드 건너뛰기 ---- 
             } 
 
             // step3
@@ -198,7 +187,6 @@ function keywordAni() {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
 
-
     setTimeout(() => {
         $('.cont-area .img-box .keyword').addClass('animate');
 
@@ -207,7 +195,6 @@ function keywordAni() {
             $('.cont-area .img-box .keyword').each(function() {
                 const keywordSpans = $(this).find('span');
                 const originalText = keywordSpans.map((_, span) => $(span).text()).get().join('');
-                console.log(originalText + 'originalText')
 
                 keywordSpans.each(function(index) {
                     if (index < txt.length) {
@@ -217,8 +204,37 @@ function keywordAni() {
                     }
                 });
 
+                setTimeout(()=> {
+                    $('.cont-area .img-box .keyword').removeClass('animate');
+                    keywordSpans.each(function(index) {
+                        if (index < originalText.length) {
+                            $(this).text(originalText.charAt(index)); 
+                        } else {
+                            $(this).text(''); 
+                        }
+                    });
+
+                    setTimeout(() => {
+                        $('.cont-area .img-box .keyword').addClass('animate');
+                
+                        setTimeout(() => {
+                            const txt = '키워드 복사하기';
+                            $('.cont-area .img-box .keyword').each(function() {
+                                const keywordSpans = $(this).find('span');
+                
+                                keywordSpans.each(function(index) {
+                                    if (index < txt.length) {
+                                        $(this).text(txt.charAt(index)); 
+                                    } else {
+                                        $(this).text(''); 
+                                    }
+                                });
+                            });
+                        }, 100)
+                    }, 500)
+                }, 1500)
             });
-        }, 200)
+        }, 100)
     }, 500)
 }
 //________________________ 키워드복사하기 애니메이션 ________________________//
@@ -390,3 +406,7 @@ document.body.addEventListener('touchstart', function(e) {
 
 
 
+
+
+
+// 키보드 고정 //

@@ -797,7 +797,12 @@
 
 
 
-
+/* sub 팝업창 깨지는거 */
+@media screen and (min-width: 281px) and (max-width: 320px) {
+    .sub-pop-area .type1 p:nth-of-type(2) {
+        font-size: 14px;
+    }
+}
 
 
 
