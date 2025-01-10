@@ -1,3 +1,4 @@
+//________________________ step별 팝업창 ________________________//
 // step01 팝업창
 const pop_step01 = `
 <div class="slide-pop step01">
@@ -49,6 +50,36 @@ const pop_step03 = `
     </div>
 </div>
 `;
+//________________________ step별 팝업창 ________________________//
+
+
+
+
+
+
+
+//________________________ step별 애니메이션 ________________________//
+const step2_animation = lottie.loadAnimation({
+    container: document.getElementById('lottie-step02'),
+    path: 'assets/json/hash_step2.json',
+    renderer: 'svg',
+    loop: 1,
+    autoplay: false,
+  });
+  
+  
+  const step3_animation = lottie.loadAnimation({
+    container: document.getElementById('lottie-step03'),
+    path: 'assets/json/hash_step3.json',
+    renderer: 'svg',
+    loop: 1,
+    autoplay: false,
+  });
+  //________________________ step별 애니메이션 ________________________//
+  
+  
+  
+  
 
 
 
@@ -69,7 +100,11 @@ var swiper = new Swiper('.swiper', {
     on: {
         // 초기 세팅
         init: function() {
+
+            // ---- step1 애니메이션 ---- 
             keywordAni()
+            // ---- step1 애니메이션 ---- 
+
 
             // ---- step1 팝업창 ---- 
             $('.btn-area button').click(function() {
@@ -80,21 +115,31 @@ var swiper = new Swiper('.swiper', {
                 })
             })
             // ---- step1 팝업창 ---- 
+            
         },
+
         // 슬라이드 전환시
-        slideChange: function() {
+        slideChangeTransitionStart: function () {
             const idx = this.realIndex;
 
             if (idx === 0) { 
-                keywordAni()
-            } 
-            
-            // step2
-            if (idx === 1) { 
-                step2_animation.goToAndStop(0, true);
-                step2_animation.play();
-                
+                console.log("step1")
 
+                // ---- step1 애니메이션 ---- 
+                keywordAni()
+                // ---- step1 애니메이션 ---- 
+
+            } 
+            if (idx === 1) { 
+                console.log("step2")
+
+                // ---- step2 애니메이션 ---- 
+                step2_animation.stop(); // 초기화
+                step2_animation.goToAndStop(0, true); // 처음으로 리셋
+                step2_animation.play(); // loop 설정된 대로 재생
+                // ---- step2 애니메이션 ---- 
+
+                
                 // ---- step2 팝업창 ---- 
                 $('.step02 .swiper-button-next').off('click').on('click', function(){
                     $('.wrap').append(pop_step02);
@@ -115,11 +160,15 @@ var swiper = new Swiper('.swiper', {
                 })
                 // ---- 가이드 건너뛰기 ---- 
             } 
-
-            // step3
             if (idx === 2) { 
-                step3_animation.goToAndStop(0, true);
+                console.log("step3")
+
+                // ---- step3 애니메이션 ---- 
+                step3_animation.stop(); // 초기화
+                step3_animation.goToAndStop(0, false);
                 step3_animation.play();
+                // ---- step3 애니메이션 ---- 
+
 
                 // ---- step3 팝업창 ---- 
                 $('.step03 .swiper-button-next').off('click').on('click', function(){
@@ -130,47 +179,23 @@ var swiper = new Swiper('.swiper', {
                     })
                 });
                 // ---- step3 팝업창 ---- 
-            }
-
-            // step4
+            } 
             if (idx === 3) { 
+                console.log("step4")
+
+                // ---- step4 하단 배너 ---- 
                 const imgTag = '<a href="https://jamonglab.com/quiz.html" class="banner" target="_blank"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
                 $('.wrap').prepend(imgTag);
                 $('.swiper-button-wrap').css('transform', 'translateY(-34px)');
-                // $('.input-block-wrap input:nth-of-type(1)').focus();
-            } else {
+                // ---- step4 하단 배너 ---- 
+            } 
+            else {
                 $('.wrap .banner').remove();
                 $('.swiper-button-wrap').css('transform', 'translateY(0)');
             }
-        }
+        },
     }
 });
-
-
-
-
-
-
-
-
-//________________________ step별 애니메이션 ________________________//
-const step2_animation = lottie.loadAnimation({
-  container: document.getElementById('lottie-step02'),
-  path: 'assets/json/hash_step2.json',
-  renderer: 'svg',
-  loop: 1,
-  autoplay: false,
-});
-
-
-const step3_animation = lottie.loadAnimation({
-  container: document.getElementById('lottie-step03'),
-  path: 'assets/json/hash_step3.json',
-  renderer: 'svg',
-  loop: 1,
-  autoplay: false,
-});
-//________________________ step별 애니메이션 ________________________//
 
 
 
@@ -182,10 +207,26 @@ const step3_animation = lottie.loadAnimation({
 
 
 //________________________ 키워드복사하기 애니메이션 ________________________//
-function keywordAni() {
+
+// for (let i = 0; i < 2; i++) {
+//     console.log(i)
+// }
+
+
+function keywordAni(repeatCount = 1) {
+    // 초기화: 모든 .keyword 요소의 내용을 초기 상태로 되돌리기
+    document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
+        button.innerHTML = button.textContent.trim();
+    });
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
+
+    let currentRepeat = 0;
+
+    function animateKeyword() {
+
+    }
 
     setTimeout(() => {
         $('.cont-area .img-box .keyword').addClass('animate');
@@ -214,29 +255,12 @@ function keywordAni() {
                         }
                     });
 
-                    setTimeout(() => {
-                        $('.cont-area .img-box .keyword').addClass('animate');
-                
-                        setTimeout(() => {
-                            const txt = '키워드 복사하기';
-                            $('.cont-area .img-box .keyword').each(function() {
-                                const keywordSpans = $(this).find('span');
-                
-                                keywordSpans.each(function(index) {
-                                    if (index < txt.length) {
-                                        $(this).text(txt.charAt(index)); 
-                                    } else {
-                                        $(this).text(''); 
-                                    }
-                                });
-                            });
-                        }, 200)
-                    }, 500)
                 }, 1500)
             });
         }, 200)
     }, 500)
 }
+
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
 
