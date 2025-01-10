@@ -230,11 +230,11 @@ function keywordAni() {
                                     }
                                 });
                             });
-                        }, 100)
+                        }, 200)
                     }, 500)
                 }, 1500)
             });
-        }, 100)
+        }, 200)
     }, 500)
 }
 //________________________ 키워드복사하기 애니메이션 ________________________//
@@ -242,30 +242,6 @@ function keywordAni() {
 
 
 
-
-
-
-
-
-// // //________________________ 정답입력 키보드 대응(ios) 참고 ________________________//
-// let prevVisualViewport = 0;
-// const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent); // iOS 디바이스인지 체크
-
-// const handleVisualViewportResize = () => {
-//   if (isIos && modal_opened) { //ios인 상태에서 모달이 오픈되면
-//     const currentVisualViewport = window.visualViewport.height; //visualViewPort의 height를 가져옵니다.
-//     if (currentVisualViewport < prevVisualViewport) {
-//       const scrollHeight = window.document.scrollingElement.scrollHeight;
-//       const scrollTop = scrollHeight - window.visualViewport.height;
-//       window.scrollTo({ top: scrollTop, behavior: 'smooth' }); // 입력창이 키보드에 가려지지 않도록 조절
-//     }
-//     prevVisualViewport = window.visualViewport.height;
-//   }
-//  };
-// if (isIOS) {
-//   window.visualViewport.onresize = handleVisualViewportResize; //visualViewPort가 변경될 때 마다 호출
-// }
-// // //________________________ 정답입력 키보드 대응(ios) ________________________//
 
 
 
