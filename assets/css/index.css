@@ -501,10 +501,7 @@
 /* 키워드 레퍼런스 애니메이션 */
 .cont-area .img-box .keyword {
     position: absolute;
-    /* bottom: 50px; */
     bottom: 13.33vw;
-    /* width: 264px; */
-    width: 70.4vw;
     width: 70.4vw;
     height: 46px;
     display: flex;

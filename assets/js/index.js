@@ -128,14 +128,6 @@ var swiper = new Swiper('.swiper', {
         slideChangeTransitionStart: function () {
             const idx = this.realIndex;
 
-            if (idx === 0) { 
-                console.log("step1")
-
-                // ---- step1 애니메이션 ---- 
-                keywordAni()
-                // ---- step1 애니메이션 ---- 
-
-            } 
             if (idx === 1) { 
                 console.log("step2")
 
@@ -214,24 +206,11 @@ var swiper = new Swiper('.swiper', {
 
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
-// for (let i = 0; i < 2; i++) {
-//     console.log(i)
-// }
+function keywordAni() {
 
-function keywordAni(repeatCount = 1) {
-    // 초기화: 모든 .keyword 요소의 내용을 초기 상태로 되돌리기
-    document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
-        button.innerHTML = button.textContent.trim();
-    });
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
         button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
     });
-
-    let currentRepeat = 0;
-
-    function animateKeyword() {
-
-    }
 
     setTimeout(() => {
         $('.cont-area .img-box .keyword').addClass('animate');
@@ -240,7 +219,6 @@ function keywordAni(repeatCount = 1) {
             const txt = '키워드 복사하기';
             $('.cont-area .img-box .keyword').each(function() {
                 const keywordSpans = $(this).find('span');
-                const originalText = keywordSpans.map((_, span) => $(span).text()).get().join('');
 
                 keywordSpans.each(function(index) {
                     if (index < txt.length) {
@@ -249,18 +227,6 @@ function keywordAni(repeatCount = 1) {
                         $(this).text(''); 
                     }
                 });
-
-                setTimeout(()=> {
-                    $('.cont-area .img-box .keyword').removeClass('animate');
-                    keywordSpans.each(function(index) {
-                        if (index < originalText.length) {
-                            $(this).text(originalText.charAt(index)); 
-                        } else {
-                            $(this).text(''); 
-                        }
-                    });
-
-                }, 1500)
             });
         }, 200)
     }, 500)
@@ -407,4 +373,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// 키보드 고정 //
