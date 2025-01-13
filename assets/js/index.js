@@ -339,29 +339,29 @@ document.body.addEventListener('touchstart', function(e) {
 
 
 //________________________ input 한글자씩 이동 (참고) ________________________//
-document.addEventListener('DOMContentLoaded', () => {
-    const inputs = document.querySelectorAll('.code-input');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const inputs = document.querySelectorAll('.code-input');
 
-    inputs.forEach((input, index) => {
-        input.addEventListener('input', (event) => {
-            const current = event.target;
-            if (current.value.length >= current.maxLength) {
-                const nextInput = inputs[index + 1];
-                if (nextInput) {
-                    nextInput.focus();
-                }
-            }
-        });
-        input.addEventListener('keydown', (event) => {
-            if (event.key === 'Backspace' && input.value === '') {
-                const prevInput = inputs[index - 1];
-                if (prevInput) {
-                    prevInput.focus();
-                }
-            }
-        });
-    });
-});
+//     inputs.forEach((input, index) => {
+//         input.addEventListener('input', (event) => {
+//             const current = event.target;
+//             if (current.value.length >= current.maxLength) {
+//                 const nextInput = inputs[index + 1];
+//                 if (nextInput) {
+//                     nextInput.focus();
+//                 }
+//             }
+//         });
+//         input.addEventListener('keydown', (event) => {
+//             if (event.key === 'Backspace' && input.value === '') {
+//                 const prevInput = inputs[index - 1];
+//                 if (prevInput) {
+//                     prevInput.focus();
+//                 }
+//             }
+//         });
+//     });
+// });
 //________________________ input 한글자씩 이동 (참고) ________________________//
 
 
