@@ -205,7 +205,6 @@ var swiper = new Swiper('.swiper', {
 
 
 //________________________ 키워드복사하기 애니메이션 ________________________//
-
 function keywordAni() {
 
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
@@ -214,7 +213,6 @@ function keywordAni() {
 
     setTimeout(() => {
         $('.cont-area .img-box .keyword').addClass('animate');
-
         setTimeout(() => {
             const txt = '키워드 복사하기';
             $('.cont-area .img-box .keyword').each(function() {
@@ -319,7 +317,7 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
-//________________________ 줌방지 참고 ________________________//
+//________________________ 줌방지 (참고) ________________________//
 document.body.addEventListener('touchstart', function(e) {
     if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
       e.preventDefault();
@@ -327,7 +325,7 @@ document.body.addEventListener('touchstart', function(e) {
       e.stopImmediatePropagation();
     }
   }, {passive: false});
-//________________________ 줌방지 참고 ________________________//
+//________________________ 줌방지 (참고) ________________________//
 
 
 
@@ -354,7 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-
         input.addEventListener('keydown', (event) => {
             if (event.key === 'Backspace' && input.value === '') {
                 const prevInput = inputs[index - 1];
