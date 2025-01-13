@@ -368,7 +368,7 @@ document.body.addEventListener('touchstart', function(e) {
 
 
 
-//________________________ input 한글자씩 이동 ________________________//
+//________________________ input 한글자씩 이동 (참고) ________________________//
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = document.querySelectorAll('.code-input');
 
@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-//________________________ input 한글자씩 ________________________//
+//________________________ input 한글자씩 이동 (참고) ________________________//
 
 
 
