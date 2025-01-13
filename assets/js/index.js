@@ -3,29 +3,33 @@
 const pop_step01 = `
 <div class="slide-pop step01">
     <div class="dimmedarea"></div>
-    <div class="pop-area">
-        <div class="txt-box">
-            <span class="bar"></span>
-            <p>키워드가 복사되었어요</p>
-            <p>검색창에 붙여넣기 해주세요</p>
-            <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
-        </div>
-        <button>이어하기</button>
-    </div>  
+    <div>
+        <div class="pop-area">
+            <div class="txt-box">
+                <span class="bar"></span>
+                <p>키워드가 복사되었어요</p>
+                <p>검색창에 붙여넣기 해주세요</p>
+                <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
+            </div>
+            <button>이어하기</button>
+        </div>  
+    </div>
 </div>
 `;
 // step02 팝업창
 const pop_step02 = `
 <div class="slide-pop step02">
     <div class="dimmedarea"></div>
-    <div class="pop-area">
-        <div class="txt-box">
-            <p>가격비교 페이지로 랜딩할 경우,</p>
-            <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
-            <p>클릭해주세요</p>
+    <div>
+        <div class="pop-area">
+            <div class="txt-box">
+                <p>가격비교 페이지로 랜딩할 경우,</p>
+                <p><span class="mark">반드시 문제에 해당하는 판매처</span>를 찾아</p>
+                <p>클릭해주세요</p>
+            </div>
+            <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
+            <button>네, 확인했어요</button>
         </div>
-        <img src="./assets/img/hash-pop-01.png" alt="가격비교 페이지로 랜딩할 경우, 반드시 문제에 해당하는 판매처를 찾아 클릭해주세요">
-        <button>네, 확인했어요</button>
     </div>
 </div>
 `;
@@ -33,20 +37,22 @@ const pop_step02 = `
 const pop_step03 = `
 <div class="slide-pop step03">
     <div class="dimmedarea"></div>
-    <div class="pop-area">
-        <div class="txt-box">
-            <p>복사한 키워드를 검색창에 붙여넣고,</p>
-            <p><span class="mark">아래 상품을 찾아주세요</span></p>
+    <div>
+        <div class="pop-area">
+            <div class="txt-box">
+                <p>복사한 키워드를 검색창에 붙여넣고,</p>
+                <p><span class="mark">아래 상품을 찾아주세요</span></p>
+            </div>
+            <div class="img-box">
+                <img src="./assets/img/prd.png" alt="복사한 키워드를 검색창에 붙여넣고,아래 상품을 찾아주세요">
+            </div>
+            <div class="info-box">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quisquam?<span>공식</span></p>
+                <p>17,800원</p>
+            </div>
+            <button>검색하러가기</button>
+            <span class="adtxt">&apos;광고&#9432;&apos; 상품은 클릭하지 마세요!</span>
         </div>
-        <div class="img-box">
-            <img src="./assets/img/prd.png" alt="복사한 키워드를 검색창에 붙여넣고,아래 상품을 찾아주세요">
-        </div>
-        <div class="info-box">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quisquam?<span>공식</span></p>
-            <p>17,800원</p>
-        </div>
-        <button>검색하러가기</button>
-        <span class="adtxt">&apos;광고&#9432;&apos; 상품은 클릭하지 마세요!</span>
     </div>
 </div>
 `;

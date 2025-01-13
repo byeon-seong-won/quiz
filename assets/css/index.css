@@ -181,17 +181,21 @@
     height: 100vh;
     width: 100%;
     z-index: 3;
+    padding: 0 10px;
 }
-.pop-area {
+.slide-pop > div:nth-child(2) {
     position: absolute;
-    left: 50%;  
-    transform: translateX(-50%);
+    right: 10px;
+    left: 10px;
     z-index: 5;
-    width: 90%;
-    padding: 28px 16px 16px 16px;
     background: #fff;
     border-radius: 30px;
     animation: slideUp 0.4s forwards;
+    padding: 0 10px;
+}
+.slide-pop > div:nth-child(2) .pop-area {
+    width: 100%;
+    padding: 28px 6px 16px 6px;
 }
 .pop-area .txt-box {
     padding-left: 6px;
@@ -206,6 +210,7 @@
         opacity: 1;
     }
 }
+
 .slide-pop .bar {
     position: absolute;
     top: 16px;
