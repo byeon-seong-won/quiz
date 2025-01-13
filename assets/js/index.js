@@ -212,7 +212,6 @@ var swiper = new Swiper('.swiper', {
 //     console.log(i)
 // }
 
-
 function keywordAni(repeatCount = 1) {
     // 초기화: 모든 .keyword 요소의 내용을 초기 상태로 되돌리기
     document.querySelectorAll('.cont-area .img-box .keyword').forEach(button => {
@@ -260,7 +259,6 @@ function keywordAni(repeatCount = 1) {
         }, 200)
     }, 500)
 }
-
 //________________________ 키워드복사하기 애니메이션 ________________________//
 
 
@@ -330,6 +328,8 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
+
+
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
 // function vibrateDevice() {
 //     if ("vibrate" in navigator) {
@@ -340,10 +340,6 @@ const pop07_animation = lottie.loadAnimation({
 //     }
 // }
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
-
-
-
-
 
 
 
@@ -372,35 +368,31 @@ document.body.addEventListener('touchstart', function(e) {
 
 
 
-
-
-
-
 //________________________ input 한글자씩 이동 ________________________//
-// document.addEventListener('DOMContentLoaded', () => {
-//     const inputs = document.querySelectorAll('.code-input');
+document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('.code-input');
 
-//     inputs.forEach((input, index) => {
-//         input.addEventListener('input', (event) => {
-//             const current = event.target;
-//             if (current.value.length >= current.maxLength) {
-//                 const nextInput = inputs[index + 1];
-//                 if (nextInput) {
-//                     nextInput.focus();
-//                 }
-//             }
-//         });
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', (event) => {
+            const current = event.target;
+            if (current.value.length >= current.maxLength) {
+                const nextInput = inputs[index + 1];
+                if (nextInput) {
+                    nextInput.focus();
+                }
+            }
+        });
 
-//         input.addEventListener('keydown', (event) => {
-//             if (event.key === 'Backspace' && input.value === '') {
-//                 const prevInput = inputs[index - 1];
-//                 if (prevInput) {
-//                     prevInput.focus();
-//                 }
-//             }
-//         });
-//     });
-// });
+        input.addEventListener('keydown', (event) => {
+            if (event.key === 'Backspace' && input.value === '') {
+                const prevInput = inputs[index - 1];
+                if (prevInput) {
+                    prevInput.focus();
+                }
+            }
+        });
+    });
+});
 //________________________ input 한글자씩 ________________________//
 
 
