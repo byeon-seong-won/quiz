@@ -211,16 +211,6 @@
     }
 }
 
-.slide-pop .bar {
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 4px;
-    background: #E6E6E6;
-    border-radius: 10px;
-}
 .slide-pop p {
     font-size: 18px;
     font-weight: 600;
@@ -660,6 +650,7 @@
     letter-spacing: -0.4px;
 }
 .input-block-wrap {
+    position: relative;
     margin: 15px 0 0;
     display: flex;
     align-items: center;
@@ -688,6 +679,7 @@
 
 /* ------- type1 : 자릿수 블록 ------- */
 .code-input {
+    display: inline-block;
     width: 9.06vw;
     height: 11.2vw;
     text-align: center;

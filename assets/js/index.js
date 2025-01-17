@@ -6,7 +6,6 @@ const pop_step01 = `
     <div>
         <div class="pop-area">
             <div class="txt-box">
-                <span class="bar"></span>
                 <p>키워드가 복사되었어요</p>
                 <p>검색창에 붙여넣기 해주세요</p>
                 <p class="desc">상세페이지를 펼쳐 해시태그를 찾아주세요</p>
@@ -71,17 +70,17 @@ const step2_animation = lottie.loadAnimation({
     renderer: 'svg',
     loop: 1,
     autoplay: false,
-  });
+});
   
   
-  const step3_animation = lottie.loadAnimation({
-    container: document.getElementById('lottie-step03'),
-    path: 'assets/json/hash_step3.json',
-    renderer: 'svg',
-    loop: 1,
-    autoplay: false,
-  });
-  //________________________ step별 애니메이션 ________________________//
+const step3_animation = lottie.loadAnimation({
+  container: document.getElementById('lottie-step03'),
+  path: 'assets/json/hash_step3.json',
+  renderer: 'svg',
+  loop: 1,
+  autoplay: false,
+});
+//________________________ step별 애니메이션 ________________________//
   
   
   
@@ -129,7 +128,6 @@ var swiper = new Swiper('.swiper', {
             const idx = this.realIndex;
 
             if (idx === 1) { 
-                console.log("step2")
 
                 // ---- step2 애니메이션 ---- 
                 step2_animation.stop(); // 초기화
@@ -159,7 +157,6 @@ var swiper = new Swiper('.swiper', {
                 // ---- 가이드 건너뛰기 ---- 
             } 
             if (idx === 2) { 
-                console.log("step3")
 
                 // ---- step3 애니메이션 ---- 
                 step3_animation.stop(); // 초기화
@@ -179,10 +176,9 @@ var swiper = new Swiper('.swiper', {
                 // ---- step3 팝업창 ---- 
             } 
             if (idx === 3) { 
-                console.log("step4")
 
                 // ---- step4 하단 배너 ---- 
-                const imgTag = '<a href="https://jamonglab.com/quiz.html" class="banner" target="_blank"><img src="assets/img/banner.png" alt="설명 텍스트"></a>';
+                const imgTag = '<a href="https://jamonglab.com/quiz.html" class="banner" target="_blank"><img src="assets/img/banner-01.png" alt="설명 텍스트"></a>';
                 $('.wrap').prepend(imgTag);
                 $('.swiper-button-wrap').css('transform', 'translateY(-34px)');
                 // ---- step4 하단 배너 ---- 
@@ -300,6 +296,8 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
+
+
 // --------------------- vibration api : 오답인경우 실행 --------------------- //
 // function vibrateDevice() {
 //     if ("vibrate" in navigator) {
@@ -317,6 +315,11 @@ const pop07_animation = lottie.loadAnimation({
 
 
 
+
+
+
+
+
 //________________________ 줌방지 (참고) ________________________//
 document.body.addEventListener('touchstart', function(e) {
     if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
@@ -326,44 +329,6 @@ document.body.addEventListener('touchstart', function(e) {
     }
   }, {passive: false});
 //________________________ 줌방지 (참고) ________________________//
-
-
-
-
-
-
-
-
-
-
-
-
-//________________________ input 한글자씩 이동 (참고) ________________________//
-// document.addEventListener('DOMContentLoaded', () => {
-//     const inputs = document.querySelectorAll('.code-input');
-
-//     inputs.forEach((input, index) => {
-//         input.addEventListener('input', (event) => {
-//             const current = event.target;
-//             if (current.value.length >= current.maxLength) {
-//                 const nextInput = inputs[index + 1];
-//                 if (nextInput) {
-//                     nextInput.focus();
-//                 }
-//             }
-//         });
-//         input.addEventListener('keydown', (event) => {
-//             if (event.key === 'Backspace' && input.value === '') {
-//                 const prevInput = inputs[index - 1];
-//                 if (prevInput) {
-//                     prevInput.focus();
-//                 }
-//             }
-//         });
-//     });
-// });
-//________________________ input 한글자씩 이동 (참고) ________________________//
-
 
 
 
